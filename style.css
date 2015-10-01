@@ -1,0 +1,39 @@
+/*
+Font
+Descriptions des polices personnalisées
+*/
+@font-face{
+	font-family: "OpenSansLight";
+	src: url('police/OpenSans-Light.ttf');
+}
+
+
+@font-face{
+	font-family: "OpenSansSemiBold";
+	src: url('polcie/OpenSans-Semibold.ttf');
+}
+
+/*
+Général
+CSS Global
+*/
+html{
+	font-family: OpenSansLight;
+	width: 100%;
+}
+
+body{
+	top:0;
+	left:0;
+	margin: auto;
+
+}
+
+footer{
+
+}
+
+/*
+Détail
+Détail du style
+*/
