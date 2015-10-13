@@ -1,22 +1,46 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
-  <title>BoulangerieMicheMiche</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-</head>
-<body>
-	<div id="topShart">
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html ng-app="scotchApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
-	</div>
-	<h1>Bienvenue sur BoulangerieMicheMiche</h1>
-	<div class="content">
-		<h2>Populaire</h2>
-	</div>
-</body>
-<footer>
-</footer>
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="script.js"></script>
+    </head>
+    <body ng-controller="mainController">
+
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+	    {{ message }}
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+	    <div ng-view></div>
+
+        </div>
+
+    </body>
+    </html>
+
