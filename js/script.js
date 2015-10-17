@@ -28,6 +28,11 @@
         templateUrl: 'pages/client.html',
         controller: 'clientCtrl'
     })
+    .state('livraison', {
+        url: '/livraison',
+        templateUrl: 'pages/livraison.html',
+        controller: 'livraisonCtrl'
+    })
     .state('contact', {
         url: '/contact',
         templateUrl: 'pages/contact.html',
