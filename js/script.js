@@ -33,6 +33,11 @@
         templateUrl: 'pages/livraison.html',
         controller: 'livraisonCtrl'
     })
+    .state('payer', {
+        url: '/payer',
+        templateUrl: 'pages/payer.html',
+        controller: 'payerCtrl'
+    })
     .state('contact', {
         url: '/contact',
         templateUrl: 'pages/contact.html',
