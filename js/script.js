@@ -13,6 +13,11 @@
         templateUrl: 'pages/home.html',
         controller: 'homeCtrl'
     })
+    .state('produits', {
+        url: '/',
+        templateUrl: 'pages/produits.html',
+        controller: 'produitsCtrl'
+    })
     .state('about', {
         url: '/',
         templateUrl: 'pages/about.html',
