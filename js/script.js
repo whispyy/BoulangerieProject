@@ -14,14 +14,19 @@
         controller: 'homeCtrl'
     })
     .state('produits', {
-        url: '/',
+        url: '/produits',
         templateUrl: 'pages/produits.html',
         controller: 'produitsCtrl'
     })
     .state('about', {
-        url: '/',
+        url: '/about',
         templateUrl: 'pages/about.html',
         controller: 'aboutCtrl'
+    })
+    .state('client', {
+        url: '/client',
+        templateUrl: 'pages/client.html',
+        controller: 'clientCtrl'
     })
     .state('contact', {
         url: '/contact',
