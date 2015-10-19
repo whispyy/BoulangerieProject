@@ -16,7 +16,7 @@
     .state('produits', {
         url: '/produits',
         templateUrl: 'pages/produits.html',
-        controller: 'profuitsCtrl'
+        controller: 'produitsCtrl'
     })
     .state('about', {
         url: '/about',

@@ -6,15 +6,15 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	console.log("produitsCtrl");
 	$scope.page = "produits";
 
-	$scope.boolBoulangerie = true;
+	$scope.boolBoulangerie = false;
 	$scope.boulangerie =
 	['baguette aux cereales',
 	'baguette paillard',
 	'baguette parisienne',
 	'baguette pavot',
-	'batard blé'
-	'batard cereales'
-	'Marguerite au pain blanc'
+	'batard blé',
+	'batard cereales',
+	'Marguerite au pain blanc',
 	'mont royal'];
 
 	$scope.boolPatisserie = true;
