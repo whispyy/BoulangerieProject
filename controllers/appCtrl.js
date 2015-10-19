@@ -13,7 +13,7 @@ mieDore.controller('appCtrl',['$scope', '$state', function($scope,$state){
 		$state.go(path);
 	};	
  	
-
+	
 		
 	
 

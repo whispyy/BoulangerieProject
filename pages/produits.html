@@ -1,4 +1,4 @@
-<h1>Tous nos produits</h1>
+<h1>Tous nos {{page}}</h1>
 <!--Categorie produits-->
 <div class="row">
   <!--Produit Boulangerie-->
@@ -30,3 +30,12 @@
     <p>Viennoiserie</p>
   </div>
 </div>
+
+<div id="boulangerie">
+  <ul ng-show="boolBoulangerie">
+    <li ng-repeat="x in boulangerie">
+      {{ x }}
+    </li>
+  </ul>
+</div>
+
