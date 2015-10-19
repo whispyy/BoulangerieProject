@@ -2,14 +2,14 @@
 <!--Categorie produits-->
 <div class="row">
   <!--Produit Boulangerie-->
-  <div class="col-xs-6 col-md-3">
+  <div class="col-xs-6 col-md-3" ng-click="fboulangerie()">
     <a href="#" class="thumbnail">
       <img src="ressources/img/Boulangerie/baguette_parisienne.jpg" alt="...">
     </a>
     <p>Boulangerie</p>
   </div>
   <!--Produit Patisserie-->
-  <div class="col-xs-6 col-md-3">
+  <div class="col-xs-6 col-md-3" ng-click="fpatisserie()">
     <a href="#" class="thumbnail">
       <img src="ressources/img/Patisserie/individuelle/Flan.png" alt="...">
     </a>
@@ -31,11 +31,29 @@
   </div>
 </div>
 
-<div id="boulangerie">
+<!--détails produits-->
   <ul ng-show="boolBoulangerie">
     <li ng-repeat="x in boulangerie">
       {{ x }}
     </li>
   </ul>
-</div>
-
+  <ul ng-show="boolPatisserie">
+    <li>Gateau</li>
+    <ul>
+      <li ng-repeat="x in gateau">
+        {{ x }}
+      </li>
+    </ul>
+    <li>Individuelle</li>
+     <ul>
+      <li ng-repeat="x in individuelle">
+        {{x}}
+      </li>
+    </ul>
+    <li>Tarte</li>
+    <ul>
+      <li ng-repeat="x in tarte">
+        {{x}}
+      </li>
+    </ul>
+  </ul>

@@ -7,6 +7,9 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	$scope.page = "produits";
 
 	$scope.boolBoulangerie = false;
+	$scope.fboulangerie = function() {
+		$scope.boolBoulangerie = !$scope.boolBoulangerie;
+	};
 	$scope.boulangerie =
 	['baguette aux cereales',
 	'baguette paillard',
@@ -17,7 +20,10 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	'Marguerite au pain blanc',
 	'mont royal'];
 
-	$scope.boolPatisserie = true;
+	$scope.boolPatisserie = false;
+	$scope.fpatisserie = function() {
+		$scope.boolPatisserie = !$scope.boolPatisserie;
+	};
 	$scope.patisserie =
 	['gateau',
 	'individuelle',
@@ -31,9 +37,19 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		'Mousse fruits rouges',
 		'Senseo'];
 	$scope.individuelle =
-		[''
+		['Eclair au café',
+		'Eclair au chocolat',
+		'Flan',
+		'Meringue chocolat',
+		'Petit mille feuilles',
+		'Religieuse au café',
+		'Religieuse au chocolat'
 		];
-
+	$scope.tarte =
+		['Tarte aux fraises',
+		'Tarte aux pommes',
+		'Tarte carachoc',
+		'Tarte au citron-meringue'];
 
 
 }]);
