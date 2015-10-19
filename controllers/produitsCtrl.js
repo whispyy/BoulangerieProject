@@ -51,5 +51,34 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		'Tarte carachoc',
 		'Tarte au citron-meringue'];
 
+	$scope.boolSandwich = false;
+	$scope.fsandwich = function() {
+		$scope.boolSandwich = !$scope.boolSandwich;
+	};
+	$scope.sandwich =
+		['jambon emmental',
+		'jambon serrano',
+		'poulet et fromage de chèvre',
+		'poulet mayonnaise',
+		'sauomn et fromage frais',
+		'thon mayonnaise'];
 
+	$scope.boolViennoiserie = false;
+	$scope.fviennoiserie = function() {
+		$scope.boolViennoiserie = !$scope.boolViennoiserie;
+	};
+	$scope.viennoiserie =
+		['abricotier',
+		'amandier',
+		'brioche au chocolat',
+		'brioche nature',
+		'brioche orange et chocolat blanc',
+		'chausson au pommes',
+		'chocolatine',
+		'croissant',
+		'escargot raisin',
+		'patte d ours',
+		'tentation',
+		'torsade au chocolat'];
+		
 }]);
