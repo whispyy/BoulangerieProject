@@ -1,13 +1,13 @@
-//Liste des produits
+﻿//Liste des produits
 
 $scope.boulangerie =
 	['baguette aux cereales',
-	'baguette paillard',
-	'baguette parisienne',
+	'baguette tradition',
+	'baguette',
 	'baguette pavot',
-	'batard blé',
-	'batard cereales',
-	'Marguerite au pain blanc',
+	'pain au blé',
+	'pains aux céréales',
+	'Marguerite sésame pavot',
 	'mont royal'];
 
 
@@ -56,7 +56,7 @@ $scope.boulangerie =
 		'brioche nature',
 		'brioche orange et chocolat blanc',
 		'chausson au pommes',
-		'chocolatine',
+		'Pain au chocolat',
 		'croissant',
 		'escargot raisin',
 		'patte d ours',
