@@ -133,24 +133,68 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 			nom : 'Eclair au café',
 			prix : ,
 			desc : '',
-		 },/*etc*/
-		'Eclair au chocolat',
-		'Flan',
-		'Meringue chocolat',
-		'Petit mille feuilles',
-		'Religieuse au café',
-		'Religieuse au chocolat'
-		];
+		 },
+		 {
+		 	id : 122,
+		 	nom : 'Eclair au chocolat',
+		 	prix : ,
+		 	desc : '',
+		 },
+		 {
+		 	id :  123,
+		 	nom : 'Flan',
+		 	prix : ,
+		 	desc : '',
+		 },
+		 {
+		 	id : 124,
+		 	nom : 'Meringue chocolat',
+		 	prix : ,
+		 	desc : '',
+		 },
+		 {
+		 	id : 125,
+		 	nom : 'Petit mille feuilles',
+		 	prix : ,
+		 	desc : '',
+		 },
+		 {
+		 	id : 126,
+		 	nom : 'Religieuse au café',
+		 	prix : ,
+		 	desc :'',
+		 },
+		 {
+		 	id : 127,
+		 	nom : 'Religieuse au chocolat',
+		 	prix : ,
+		 	desc : '',
+		}];
 	$scope.tarte =
 		[{
 			id : 131,
 			nom : 'Tarte aux fraises',
 			prix : ,
 			desc : '',
-		}, /*etc*/
-		'Tarte aux pommes',
-		'Tarte carachoc',
-		'Tarte au citron-meringue'];
+		},
+		{
+			id : 132,
+			nom : 'Tarte aux pommes',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 133,
+			nom : 'Tarte carachoc',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 134,
+			nom : 'Tarte au citron-meringue',
+			prix : ,
+			desc : '',
+		}];
 
 	$scope.boolSandwich = false;
 	$scope.fsandwich = function() {
@@ -165,12 +209,37 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 			nom : 'jambon emmental',
 			prix : ,
 			desc : '',
-		}/*etc*/
-		'jambon serrano',
-		'poulet et fromage de chèvre',
-		'poulet mayonnaise',
-		'sauomn et fromage frais',
-		'thon mayonnaise'];
+		},
+		{
+			id : 202,
+			nom : 'jambon serrano',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 203,
+			nom : 'poulet et fromage de chèvre',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 204,
+			nom : 'poulet mayonnaise',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 205,
+			nom : 'sauomn et fromage frais',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 206,
+			nom : 'thon mayonnaise'
+			prix : ,
+			desc : '',
+		}];
 
 	$scope.boolViennoiserie = false;
 	$scope.fviennoiserie = function() {
@@ -185,18 +254,73 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 			nom : 'abricotier',
 			prix : ,
 			desc : '',
-		}, /*etc*/
-		'amandier',
-		'brioche au chocolat',
-		'brioche nature',
-		'brioche orange et chocolat blanc',
-		'chausson au pommes',
-		'Pain au chocolat',
-		'croissant',
-		'escargot raisin',
-		'patte d ours',
-		'tentation',
-		'torsade au chocolat'];
+		},
+		{
+			id : 302,
+			nom : 'amandier',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 303,
+			nom : 'brioche au chocolat',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 304,
+			nom : 'brioche nature',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 305,
+			nom : 'brioche orange et chocolat blanc',
+			prix : ,
+			desc : ''
+		},
+		{
+			id : 306,
+			nom : 'chausson au pommes',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 307,
+			nom : 'Pain au chocolat',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 308,
+			nom : 'croissant',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 309,
+			nom : 'escargot raisin',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 310
+			nom : 'patte d ours',
+			prix ,
+			desc : '',
+		},
+		{
+			id : 311,
+			nom : 'tentation',
+			prix : ,
+			desc : '',
+		},
+		{
+			id : 312,
+			nom : 'torsade au chocolat',
+			prix : ,
+			desc : '',
+		}];
 		
 }]);
 
