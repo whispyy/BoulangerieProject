@@ -1,20 +1,6 @@
-'use strict';
+//Liste des produits
 
-mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
-
-
-	console.log("produitsCtrl");
-	$scope.page = "produits";
-
-	$scope.boolBoulangerie = false;
-	$scope.fboulangerie = function() {
-		$scope.boolBoulangerie = !$scope.boolBoulangerie;
-		$scope.boolPatisserie = false;
-		$scope.boolSandwich = false;
-		$scope.boolViennoiserie = false;
-
-	};
-	$scope.boulangerie =
+$scope.boulangerie =
 	['baguette aux cereales',
 	'baguette paillard',
 	'baguette parisienne',
@@ -24,18 +10,12 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	'Marguerite au pain blanc',
 	'mont royal'];
 
-	$scope.boolPatisserie = false;
-	$scope.fpatisserie = function() {
-		$scope.boolBoulangerie = false;
-		$scope.boolPatisserie = !$scope.boolPatisserie;
-		$scope.boolSandwich = false;
-		$scope.boolViennoiserie = false;
 
-	};
 	$scope.patisserie =
 	['gateau',
 	'individuelle',
 	'tarte'];
+
 	$scope.gateau = [
 		'Foret noire',
 		'Fraisier',
@@ -59,13 +39,7 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		'Tarte carachoc',
 		'Tarte au citron-meringue'];
 
-	$scope.boolSandwich = false;
-	$scope.fsandwich = function() {
-		$scope.boolBoulangerie = false;
-		$scope.boolPatisserie = false;
-		$scope.boolSandwich = !$scope.boolSandwich;
-		$scope.boolViennoiserie = false;
-	};
+
 	$scope.sandwich =
 		['jambon emmental',
 		'jambon serrano',
@@ -74,13 +48,7 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		'sauomn et fromage frais',
 		'thon mayonnaise'];
 
-	$scope.boolViennoiserie = false;
-	$scope.fviennoiserie = function() {
-		$scope.boolBoulangerie = false;
-		$scope.boolPatisserie = false;
-		$scope.boolSandwich = false;
-		$scope.boolViennoiserie = !$scope.boolViennoiserie;
-	};
+
 	$scope.viennoiserie =
 		['abricotier',
 		'amandier',
@@ -95,4 +63,3 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		'tentation',
 		'torsade au chocolat'];
 		
-}]);
