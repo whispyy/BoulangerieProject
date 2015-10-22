@@ -11,10 +11,11 @@
 			<button ng-click="selectedDrive()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;">Drive</button>
 		</div>
 		<div ng-if="menu==1">
-			Livraison
+			Livraison pour : 
+			<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
 		</div>
 		<div ng-if="menu==2">
-			Drive
+			Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
 		</div>
 		<a ng-click="go('payer')"> Continuer</a>
 	</div>
