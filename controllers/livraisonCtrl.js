@@ -13,7 +13,8 @@ mieDore.controller('livraisonCtrl',['$scope', '$state', function($scope,$state){
 
 
 	$scope.listes = [];
-		var min15 = $scope.minutes+15;
+	$scope.listes.push({'id':0,'t':""});
+	var min15 = $scope.minutes+15;
 	if(min15 < 60)
 	{
 		$scope.listes.push({'id':1,'t':""+$scope.heure+"h "+(min15)+"min"});
