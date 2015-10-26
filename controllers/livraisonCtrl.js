@@ -2,13 +2,9 @@
 
 mieDore.controller('livraisonCtrl',['$scope', '$state', function($scope,$state){
 
-
-	console.log("livraisonCtrl");
 	var date = new Date();
 	$scope.heure = parseInt(date.getHours());
 	$scope.minutes = parseInt(date.getMinutes());
-	console.log($scope.minutes);
-	console.log($scope.heure);
 
 
 
@@ -43,7 +39,6 @@ mieDore.controller('livraisonCtrl',['$scope', '$state', function($scope,$state){
 	}
 	var heure = $scope.heure+1;
 	$scope.listes.push({'id':4,'t':heure+"h "+$scope.minutes+"min"});
-	console.log($scope.liste);
     $scope.liste = $scope.listes[2]; // red
 
 	$scope.page = "livraison";

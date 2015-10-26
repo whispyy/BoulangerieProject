@@ -1,5 +1,6 @@
+<div class="container">
 <div class="row">
-<div class="col-md-8" >
+<div class="col-md-9" >
 	<div style="text-align:center; color:orange;">
 		<img style="width:25px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png"> <img style="width:25px;" src="ressources/number3-OK.png">    ...    <img style="width:25px;" src="ressources/number4.png">
 	</div>
@@ -13,15 +14,44 @@
 		<div ng-if="menu==1">
 			Livraison pour : 
 			<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+			<div class="text-center">
+              <a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              
+          </div>
 		</div>
 		<div ng-if="menu==2">
 			Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+			<div class="text-center">
+              <a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              
+          </div>
 		</div>
-		<a ng-click="go('payer')"> Continuer</a>
+		
 	</div>
 		
 </div>
-<div class="col-md-4">
-	<h1>Mon panier</h1><br/><br/><br/>test
+<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+         
+            <div class="panel panel-primary">
+              <div id="divTotal" class="panel-heading">
+                  <h3 class="panel-title">Mon panier</h3>
+              </div>
+              <div ng-if="panier[0] != undefined">
+              <div ng-repeat="item in panier" class="panel-body">
+                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix}} €</i></p>
+              </div>
+              <hr style="margin-top : -10px; margin-bottom:0px;">
+              <div class="panel-body">
+                  <p>Total<i style="float:right">{{prixPanier}} €</i></p>
+              </div>
+            </div>
+            <div ng-if="panier[0] == undefined" class="panel-body">
+              <p>Votre panier est vide</p>
+            </div>
+
+          </div>
+          
+        
+</div>
 </div>
 </div>

@@ -2,17 +2,61 @@
 
 mieDore.controller('appCtrl',['$scope', '$state', function($scope,$state){
 
-
-
+	$scope.idUser = 1; //faire le get pour que chaque fois qu'un mec se connecte on ait un idUser différent, ca nous permettra de savoir combien de visites et combien vont au terme
+	$scope.prixPanier = 0;
 	$scope.message = "appCtrl";
 
-	
+	$scope.panier=[];
+
+	//------- Pour ajouter au besoin des articles au panier -----------------//
+
+	/*var item={'id':1,'nom' : "Baguette Parisienne", 'prix': 2.10, 'quantite' : 2};
+	var item2={'id':13,'nom' : "sandwich jambon beurre", 'prix': 1.50, 'quantite' : 1};
+	$scope.panier.push(item);
+	$scope.panier.push(item2);*/
+
+	$scope.populaires = [];
+	var pop1={'id':1,'nom' : "Baguette Parisienne", 'prix': 2.10,'src':"ressources/img/Boulangerie/baguette_parisienne.jpg"};
+	var pop2={'id':2,'nom' : "Flan", 'prix': 3.10,'src':"ressources/img/Patisserie/individuelle/Flan.png"};
+	var pop3={'id':3,'nom' : "Sandwich Jambon Emmental", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
+	$scope.populaires.push(pop1);
+	$scope.populaires.push(pop2);
+	$scope.populaires.push(pop3);
 
 	$scope.go = function(path) {
 		console.log(path);
 		$state.go(path);
 	};	
  	
+ 	$scope.calculPrixPanier = function()
+ 	{
+ 		$scope.prixPanier=0;
+ 		angular.forEach($scope.panier, function(item) {
+ 			$scope.prixPanier = parseFloat($scope.prixPanier) + (parseFloat(item.quantite)*parseFloat(item.prix));
+ 		});
+ 	}
+
+ 	$scope.addPanier=function(item){
+ 		var newItem = {};
+ 		newItem.id=item.id;
+ 		newItem.nom = item.nom;
+ 		newItem.prix=item.prix;
+ 		newItem.quantite=parseInt(item.quantite);
+ 		angular.forEach($scope.panier, function(panier) {
+ 			if(panier.id == item.id)
+ 			{
+ 				panier.quantite = parseInt(panier.quantite) + parseInt(item.quantite);
+ 				item.quantite=0.00;
+ 			}
+ 		});
+ 		if(item.quantite != 0)
+ 		{
+ 			$scope.panier.push(newItem);
+ 		}
+ 		$scope.calculPrixPanier();
+ 		
+ 	}
+
 	
 		
 	

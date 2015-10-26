@@ -9,7 +9,7 @@
     // configure our routes
     $stateProvider
     .state('home', {
-        url: '/',
+        url: '/home',
         templateUrl: 'pages/home.html',
         controller: 'homeCtrl'
     })

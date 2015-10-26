@@ -1,31 +1,48 @@
-<h1>Ceci est la page home</h1>
+
 <div class="container">
- <h2>Populaire</h2>
+
+ <div class="col-md-9" >
+  <h1>Ceci est la page home</h1>
+  <div style="text-align:center; color:orange;">
+    <img style="width:25px;" src="ressources/number1-OK.png">    ...    <img style="width:25px;" src="ressources/number2.png"> <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
+  </div>
+  <h2>Populaire</h2>
  <div class="im-centered">
 	<div class="row"> <!--Top Products-->
-
-	<!--Produit 1-->
-   <div class="col-xs-6 col-md-3">
+  
+       <div ng-repeat="populaire in populaires" class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="ressources/img/Boulangerie/baguette_parisienne.jpg" alt="...">
-    </a>
+      <img style="width:150px; height:100px;" ng-src="{{populaire.src}}" alt="{{populaire.nom}}">
+    </a><p>{{populaire.prix}} € <select ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+</select> <span style="float:right;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
    </div>
-
-		<!--Produit 2-->
-   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Patisserie/individuelle/Flan.png" alt="...">
-    </a>
-   </div>
-
-  <!--Produit 3-->
-   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Sandwich/Sandwich-jambon-emmental.jpg" alt="...">
-    </a>
-	 </div>
   </div>
- </div>
- <h3 ng-click="go('produits')"> Tous Nos Produits</h3>
+</div>
+<h3 ng-click="go('produits')"> Tous Nos Produits</h3>
  <a ng-click="go('client')"> Continuer</a>
+ </div>
+<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+         
+            <div class="panel panel-primary">
+              <div id="divTotal" class="panel-heading">
+                  <h3 class="panel-title">Mon panier</h3>
+              </div>
+              <div ng-if="panier[0] != undefined">
+              <div ng-repeat="item in panier" class="panel-body">
+                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix}} €</i></p>
+              </div>
+              <hr style="margin-top : -10px; margin-bottom:0px;">
+              <div class="panel-body">
+                  <p>Total<i style="float:right">{{prixPanier}} €</i></p>
+              </div>
+            </div>
+            <div ng-if="panier[0] == undefined" class="panel-body">
+              <p>Votre panier est vide</p>
+            </div>
+
+          </div>
+          
+        
+</div>
+ 
 </div>
