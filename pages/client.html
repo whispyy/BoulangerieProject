@@ -58,11 +58,11 @@
               </div>
               <div ng-if="panier[0] != undefined">
               <div ng-repeat="item in panier" class="panel-body">
-                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix}} €</i></p>
+                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix| number:2}} €</i></p>
               </div>
               <hr style="margin-top : -10px; margin-bottom:0px;">
               <div class="panel-body">
-                  <p>Total<i style="float:right">{{prixPanier}} €</i></p>
+                  <p>Total<i style="float:right">{{prixPanier| number:2}} €</i></p>
               </div>
             </div>
             <div ng-if="panier[0] == undefined" class="panel-body">

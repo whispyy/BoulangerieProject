@@ -46,15 +46,33 @@ mieDore.controller('appCtrl',['$scope', '$state', function($scope,$state){
  			if(panier.id == item.id)
  			{
  				panier.quantite = parseInt(panier.quantite) + parseInt(item.quantite);
- 				item.quantite=0.00;
+ 				item.quantite=0;
  			}
  		});
  		if(item.quantite != 0)
  		{
  			$scope.panier.push(newItem);
  		}
- 		$scope.calculPrixPanier();
- 		
+ 		$scope.calculPrixPanier();	
+ 	}
+
+ 	$scope.delPanier=function(item){
+ 		var i=0;
+ 		for (i; i < $scope.panier.length; i++) 
+		{ 
+		   if($scope.panier[i].id == item.id)
+ 			{
+ 				if(item.quantite>1)
+ 				{
+ 					$scope.panier[i].quantite = $scope.panier[i].quantite-1;
+ 				}
+ 				else if(item.quantite==1)
+ 				{
+ 					$scope.panier.splice(i,1);
+ 				}
+ 				$scope.calculPrixPanier();
+ 			}
+		} 
  	}
 
 	
