@@ -10,10 +10,14 @@
 	<div class="row"> <!--Top Products-->
   
        <div ng-repeat="populaire in populaires" class="col-xs-6 col-md-3">
+    <h4>{{populaire.nom}}</h4>
     <a href="#" class="thumbnail">
       <img style="width:150px; height:100px;" ng-src="{{populaire.src}}" alt="{{populaire.nom}}">
-    </a><p>{{populaire.prix | number:2}} € <select ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
-</select> <span style="float:right;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+    </a>
+    
+      <p>{{populaire.prix | number:2}} € <select style="margin-left: 20px;" ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+      </select> <span style="float:right;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+  
    </div>
   </div>
 </div>

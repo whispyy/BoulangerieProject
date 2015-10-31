@@ -18,7 +18,7 @@ mieDore.controller('appCtrl',['$scope', '$state', function($scope,$state){
 	$scope.populaires = [];
 	var pop1={'id':1,'nom' : "Baguette Parisienne", 'prix': 2.10,'src':"ressources/img/Boulangerie/baguette_parisienne.jpg"};
 	var pop2={'id':2,'nom' : "Flan", 'prix': 3.10,'src':"ressources/img/Patisserie/individuelle/Flan.png"};
-	var pop3={'id':3,'nom' : "Sandwich Jambon Emmental", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
+	var pop3={'id':3,'nom' : "S. Jambon Fromage", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
 	$scope.populaires.push(pop1);
 	$scope.populaires.push(pop2);
 	$scope.populaires.push(pop3);
