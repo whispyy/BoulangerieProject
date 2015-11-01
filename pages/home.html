@@ -2,6 +2,7 @@
 <div class="container">
 
  <div class="col-md-9" >
+
   <div style="text-align:center; color:orange;">
     <img style="width:25px;" src="ressources/number1-OK.png">    ...    <img style="width:25px;" src="ressources/number2.png"> <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
   </div>
@@ -21,7 +22,10 @@
    </div>
   </div>
 </div>
-<h3 ng-click="go('produits')"> Tous Nos Produits</h3>
+<h3>Tous Nos Produits</h3>
+<div style="text-align:center">
+<img ng-click="go('produits')" style="width:100%;border-radius:2px;" src="ressources/nosproduits.jpg">
+ </div>
  <a ng-click="go('client')"> Continuer</a>
  </div>
 <div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
