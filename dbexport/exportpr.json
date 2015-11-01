@@ -1,1 +1,285 @@
-{ "_id" : { "$oid" : "563633bd6ac1db58d094bc81" }, "idProduit" : 1, "nom" : "Baguette", "prix" : 1.25, "src" : "test", "desc" : "Ceci est une baguette" }
+{
+	"id" : 001,
+	"nom" :"baguette aux cereales",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 002,
+	"nom" :"baguette tradition",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 003,
+	"nom" :"baguette",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 004,
+	"nom" :"baguette pavot",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 005,
+	"nom" :"pain au blé",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 006,
+	"nom" :"pains aux céréales",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 007,
+	"nom" :"Marguerite sésame pavot",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 008,
+	"nom" :"mont royal",
+	"prix" : 1,
+	"desc" : "",
+},
+
+
+{
+	"id" : 101,
+	"nom" :"gateau",
+},
+{
+	"id" : 102,
+	"nom" :"individuelle",
+},
+{
+	"id" : 103,
+	"nom" :"tarte",
+}
+
+{
+	"id" : 111,
+	"nom" :"Foret noire",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 112,
+	"nom" :"Fraisier",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 113,
+	"nom" :"Grand mille feuilles",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 114,
+	"nom" :"Grand paris brest",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 115,
+	"nom" :"Mousse abricot",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 116,
+	"nom" :"Mousse fruits rouges",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 117,
+	"nom" :"Senseo",
+	"prix" : 1,
+	"desc" : "",
+}
+{
+	"id" : 121,
+	"nom" :"Eclair au café",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+ 	"id" : 122,
+ 	"nom" :"Eclair au chocolat",
+ 	"prix" : 1,
+ 	"desc" : "",
+},
+{
+ 	"id" :  123,
+ 	"nom" :"Flan",
+ 	"prix" : 1,
+ 	"desc" : "",
+},
+{
+ 	"id" : 124,
+ 	"nom" :"Meringue chocolat",
+ 	"prix" : 1,
+ 	"desc" : "",
+},
+{
+ 	"id" : 125,
+ 	"nom" :"Petit mille feuilles",
+ 	"prix" : 1,
+ 	"desc" : "",
+},
+{
+ 	"id" : 126,
+ 	"nom" :"Religieuse au café",
+ 	"prix" : 1,
+	"desc" :"",
+},
+{
+ 	"id" : 127,
+ 	"nom" :"Religieuse au chocolat",
+ 	"prix" : 1,
+ 	"desc" : "",
+},
+
+{
+	"id" : 131,
+	"nom" :"Tarte aux fraises",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 132,
+	"nom" :"Tarte aux pommes",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 133,
+	"nom" :"Tarte carachoc",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 134,
+	"nom" :"Tarte au citron-meringue",
+	"prix" : 1,
+	"desc" : "",
+},
+
+
+{
+	"id" : 201 ,
+	"nom" :"jambon emmental",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 202,
+	"nom" :"jambon serrano",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 203,
+	"nom" :"poulet et fromage de chèvre",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 204,
+	"nom" :"poulet mayonnaise",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 205,
+	"nom" :"saumon et fromage frais",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 206,
+	"nom" :"thon mayonnaise"
+	"prix" : 1,
+	"desc" : "",
+},
+
+
+
+{
+	"id" : 301,
+	"nom" :"abricotier",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 302,
+	"nom" :"amandier",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 303,
+	"nom" :"brioche au chocolat",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 304,
+	"nom" :"brioche nature",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 305,
+	"nom" :"brioche orange et chocolat blanc",
+	"prix" : 1,
+	"desc" : ""
+},
+{
+	"id" : 306,
+	"nom" :"chausson au pommes",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 307,
+	"nom" :"Pain au chocolat",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 308,
+	"nom" :"croissant",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 309,
+	"nom" :"escargot raisin",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 310
+	"nom" :"patte d ours",
+	"prix" ,
+	"desc" : "",
+},
+{
+	"id" : 311,
+	"nom" :"tentation",
+	"prix" : 1,
+	"desc" : "",
+},
+{
+	"id" : 312,
+	"nom" :"torsade au chocolat",
+	"prix" : 1,
+	"desc" : "",
+}
