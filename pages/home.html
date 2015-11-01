@@ -16,8 +16,8 @@
       <img style="width:150px; height:100px;" ng-src="{{populaire.src}}" alt="{{populaire.nom}}">
     </a>
     
-      <p>{{populaire.prix | number:2}} € <select style="margin-left: 20px;" ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
-      </select> <span style="float:right;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+      <p style="margin-top:7px;">{{populaire.prix | number:2}} € <select style="margin-left: 20px;" ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+      </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
   
    </div>
   </div>
@@ -25,8 +25,9 @@
 <h3>Tous Nos Produits</h3>
 <div style="text-align:center">
 <img ng-click="go('produits')" style="width:100%;border-radius:2px;" src="ressources/nosproduits.jpg">
- </div>
- <a ng-click="go('client')"> Continuer</a>
+
+ <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; text-align:center;margin:20px;">Continuer</button>
+  </div>
  </div>
 <div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
          
@@ -48,6 +49,7 @@
             </div>
 
           </div>
+           <button ng-if="panier[0] != undefined" ng-click="go('client')" type="button" class="btn btn-primary" style="width: 100%; text-align:center;">Continuer</button>
           
         
 </div>
