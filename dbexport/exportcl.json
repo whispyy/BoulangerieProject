@@ -1,0 +1,17 @@
+{
+	"idClient" : 1, 
+	"prenom" : "JeanMichel", 
+	"nom" : "Dupont", 
+	"adresse" : "66 rue du moulin, 75000 Paris", 
+	"mail" : "jeanmichedu@toto.fr", 
+	"tel" : "0625458796" 
+},
+{
+	"idClient" : 2, 
+	"prenom" : "JeanMichel2", 
+	"nom" : "Dupont2", 
+	"adresse" : "662 rue du moulin, 75000 Paris", 
+	"mail" : "jeanmichedu@toto2.fr", 
+	"tel" : "0625458792" 
+}
+

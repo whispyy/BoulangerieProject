@@ -1,0 +1,21 @@
+{
+  "name": "ChronoPain",
+  "version": "0.0.1",
+  "description": "Chronopain noveau service de boulangerie traditionnelle",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whispyy/BoulangerieProject.git"
+  },
+  "keywords": [
+    "pain"
+  ],
+  "author": "The Boulangerie Team",
+  "license": "CeCILL",
+  "bugs": {
+    "url": "https://github.com/whispyy/BoulangerieProject/issues"
+  }
+}
