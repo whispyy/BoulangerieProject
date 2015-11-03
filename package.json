@@ -17,5 +17,8 @@
   "license": "CeCILL",
   "bugs": {
     "url": "https://github.com/whispyy/BoulangerieProject/issues"
+  },
+  "dependencies": {
+    "mongoose": "~4.2.4"
   }
 }
