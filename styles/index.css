@@ -3,22 +3,42 @@ GENERAL
 */
 
 html{
-
+	background-color: #fd7e01;
 }
 
 body{
-
+	background-color: darkgrey;
 }
 
+footer{
+	background-color: #fd7e01;
+}
 /*NavBar*/
 .navbar li{
 	color: white;
 }
 
-/*
-HOME
-*/
-.im-centered{
-	margin: auto;
-	max-width: 800px;
+/*footer*/
+.foot{
+	float: left;
+	margin-left: 20px;
+}
+.socials {
+	float: right;
+}
+.socials li {
+    display: inline-block;
+    float: left;
+}
+.socials a{
+	display: block;
+    height: 32px;
+    width: 32px;
+    background: transparent url("ressources/icons.svg") no-repeat scroll -32px 0px;
+}
+
+.copyright{
+	clear: both;
+	text-align: center;
+	margin-bottom: 0;
 }
