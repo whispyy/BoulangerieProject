@@ -14,10 +14,16 @@ footer{
 	background-color: #fd7e01;
 }
 /*NavBar*/
-.navbar li{
-	color: white;
-}
 
+#navjf{
+	background-color: #8d5524;
+	color: #333333;
+
+}
+#navjf li{
+	
+	margin-right: 20px;
+}
 /*footer*/
 .foot{
 	float: left;
