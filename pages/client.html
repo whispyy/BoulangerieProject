@@ -5,7 +5,8 @@
 		<img style="width:25px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png">    ...    <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
 	</div>
 	<div>
-	<h1>Ceci est la page {{page}}</h1>
+	<h1>Entrez vos informations {{page}}</h1>
+	<br /><br />
 		<div class="row" >
 			<div class="col-md-3">
 				Nom : 
@@ -47,8 +48,9 @@
 			</div>
 		</div>
 	</div>
-	<a ng-click="go('livraison')"> Continuer</a>
-		
+	<br />
+	<a ng-click="go('livraison')" type="button" class="btn btn-primary">Continuer</a>
+	<br /><br />
 </div>
 <div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
          
