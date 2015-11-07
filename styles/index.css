@@ -13,18 +13,37 @@ body{
 footer{
 	background-color: #fd7e01;
 }
-/*NavBar*/
+
+/*
+NavBar
+*/
 
 #navjf{
 	background-color: #8d5524;
 	color: #333333;
+	height: 50px;
 
 }
+/*logo*/
+#navjf img{
+	margin-top: -10px;
+}
+/*liens*/
+#navjf ul{
+	margin-top: 10px;
+	font-size: large;
+}
 #navjf li{
-	
 	margin-right: 20px;
 }
-/*footer*/
+#navjf li:hover{
+	color: white;
+}
+
+
+/*
+footer
+*/
 .foot{
 	float: left;
 	margin-left: 30px;

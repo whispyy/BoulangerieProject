@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="ressources/logo.png" />
   <title>ChronoPain</title>
   <!--css-->
   <link rel="stylesheet" href="styles/index.css">
@@ -38,7 +38,7 @@
     <nav class="navbar" id="navjf">
       <div class="container-fluid">
           <div class="navbar-header">
-                <a class="navbar-brand" ng-click="go('home')">Chronopain.fr</a>
+                <a class="navbar-brand" ng-click="go('home')"><img src="ressources/logo.png" width="40px"/></a>
                 
           </div>
           <div class="collapse navbar-collapse">
@@ -63,8 +63,8 @@
 <footer>
   <div class="foot">
     <h3>Information</h3>
-    <p>Contactez nous</p>
-    <p>A propos</p>
+    <p ng-click="go('contact')">Contactez nous</p>
+    <p ng-click="go('about')">A propos</p>
   </div>
   <div class="foot">
     <h3>En savoir plus... </h3>
