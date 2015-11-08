@@ -1,10 +1,11 @@
 <div class="container">
-	
-<div class="col-md-9" >
-	<div style="text-align:center; color:orange;">
-		<img style="width:25px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png">    ...    <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
+	<div class="step">
+		<img style="width:25px;margin-top:3px;margin-bottom:3px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png">    ...    <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
 	</div>
-	<div>
+<div class="col-md-9" >
+	 
+	<div class="transp">
+		<div style="margin:25px;padding-top: 10px;">
 	<h1>Entrez vos informations {{page}}</h1>
 	<br /><br />
 		<div class="row" >
@@ -48,9 +49,10 @@
 			</div>
 		</div>
 	</div>
-	<br />
+	<div style="text-align:center;">
 	<a ng-click="go('livraison')" type="button" class="btn btn-primary">Continuer</a>
-	<br /><br />
+	</div>
+</div>
 </div>
 <div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
          

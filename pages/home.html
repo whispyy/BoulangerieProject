@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="../styles/home.css">
 <div class="container">
-
+<div class="step">
+    <img style="width:25px; margin-top:3px;margin-bottom:3px;" src="ressources/number1-OK.png">    ...    <img style="width:25px;" src="ressources/number2.png"> <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
+  </div>
  <div class="col-md-9" >
 
-  <div style="text-align:center; color:orange;">
-    <img style="width:25px;" src="ressources/number1-OK.png">    ...    <img style="width:25px;" src="ressources/number2.png"> <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
-  </div>
+  
+  <div class="transp">
+    <div style="margin:25px;padding-top: 10px;">
   <h2>Populaire</h2>
  <div class="im-centered">
 	<div class="row"> <!--Top Products-->
@@ -24,10 +26,12 @@
 </div>
 <h3>Tous Nos Produits</h3>
 <div style="text-align:center">
-<img ng-click="go('produits')" style="width:100%;border-radius:2px;" src="ressources/nosproduits.jpg">
+<img ng-click="go('produits')" style="width:100%;border-radius:2px;" src="ressources/mich1.jpg">
 
  <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; text-align:center;margin:20px;">Continuer</button>
   </div>
+</div>
+</div>
  </div>
 <div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
          

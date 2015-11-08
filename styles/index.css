@@ -3,7 +3,7 @@ GENERAL
 */
 
 html{
-	background-color: #fd7e01;
+	background-color: #A16028;
 }
 
 body{
@@ -11,7 +11,7 @@ body{
 }
 
 footer{
-	background-color: #fd7e01;
+	background-color: #A16028;
 }
 
 /*
@@ -19,7 +19,7 @@ NavBar
 */
 
 #navjf{
-	background-color: #8d5524;
+	background-color: #A16028;
 	color: #333333;
 	height: 50px;
 
@@ -67,3 +67,31 @@ footer
 	text-align: center;
 	margin-bottom: 0;
 }
+
+.panel-heading{
+	background-color: #A16028 !important;
+    border-color: #A16028 !important;
+}
+
+.panel-primary {
+    border-color: #A16028 !important;
+    margin-top:25px !important;
+}
+
+.transp{
+	    background-color: rgba(255, 255, 255, 0.5);
+	    margin-top:10px;
+	    margin-bottom:10px;
+	    border-radius:5px;
+}
+
+.step
+{
+	text-align:center; color:orange;background-color: white;margin-right: 43%;margin-left: 43%;border-radius: 10px;"
+}
+
+.btn-primary{
+	background-color:#A16028 !important;
+	border-color:#A16028 !important;
+}
+ 
