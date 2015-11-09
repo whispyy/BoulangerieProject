@@ -28,6 +28,16 @@ NavBar
 #navjf img{
 	margin-top: -10px;
 }
+/*a cote du logo*/
+#JFbrand{
+	color: #fd7e01;
+	text-decoration: none;
+	font-size: xx-large;
+	font-weight: bold;
+}
+#JFbrand:hover{
+	color: #fee5cc;
+}
 /*liens*/
 #navjf ul{
 	margin-top: 10px;

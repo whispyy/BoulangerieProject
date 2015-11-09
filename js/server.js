@@ -1,15 +1,38 @@
-var http = require('http');
+http = require("http"),
+path = require("path"),
+url = require("url"),
+fs = require("fs");
 
-function start(){
-	function onRequest(request, response) {
-  		response.writeHead(200, {"Content-Type": "text/plain"});
-  		response.write('Hello World');
-  		response.end();
-	}
-
-	http.createServer(onRequest).listen(8888);
-	console.log('Démarrage du Serveur de ouuuuuf');
+function sendError(errCode, errString, response)
+{
+  response.writeHead(errCode, {"Content-Type": "text/plain"});
+  response.write(errString + "\n");
+  response.end();
+  return;
 }
 
-exports.start = start;
+function sendFile(err, file, response)
+{
+  if(err) return sendError(500, err, response);
+  response.writeHead(200);
+  response.write(file, "binary");
+  response.end();
+}
 
+function getFile(exists, response, localpath)
+{
+  if(!exists) return sendError(404, '404 Not Found', response);
+  fs.readFile(localpath, "binary",
+   function(err, file){ sendFile(err, file, response);});
+}
+
+function getFilename(request, response)
+{
+  var urlpath = url.parse(request.url).pathname; // following domain or IP and port
+  var localpath = path.join(process.cwd(), urlpath); // if we are at root
+  path.exists(localpath, function(result) { getFile(result, response, localpath)});
+}
+
+var server = http.createServer(getFilename);
+server.listen(8888);
+console.log("WESH, JF IL DEMARRE DES SERV !"); 
