@@ -4,6 +4,7 @@
   "description": "Chronopain noveau service de boulangerie traditionnelle",
   "main": "js/script.js",
   "scripts": {
+    "start": "node js/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
