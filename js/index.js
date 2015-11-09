@@ -1,11 +1,14 @@
 var server = require('./server');
 var mongoose = require('mongoose');
+var express = require('express');
 
+//var app = express();
 
+/*
 mongoose.connect('mongodb://localhost/BoulangerieProject', function(err) {
   if (err) { throw err; }
 });
-
+*/
 /*creer schema produit*/
 var produitSchema = new mongoose.Schema({
 	id : Number,
@@ -54,4 +57,3 @@ monClient.save(function (err) {
   mongoose.connection.close();
 });
 
-//deconnexion
