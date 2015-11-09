@@ -1,6 +1,6 @@
 'use strict';
 
-mieDore.controller('appCtrl',['$scope', '$state', function($scope,$state){
+mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http,$state){
 
 	$scope.idUser = 1; //faire le get pour que chaque fois qu'un mec se connecte on ait un idUser différent, ca nous permettra de savoir combien de visites et combien vont au terme
 	$scope.prixPanier = 0;

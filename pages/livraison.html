@@ -3,34 +3,37 @@
 	<div class="step">
 		<img style="width:25px;margin-top:3px;margin-bottom:3px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png"> <img style="width:25px;" src="ressources/number3-OK.png">    ...    <img style="width:25px;" src="ressources/number4.png">
 	</div>
-<div class="col-md-9" >
-	
-	<div style="margin-left:10%" class="transp">
+	<div class="col-md-9" >
+	  <div style="margin-left:10%" class="transp">
 		<div style="margin:25px;padding-top: 10px;">
-	<h1>Choisissez votre mode de {{page}}</h1>
-	<br />
-	<p style="text-align: center">Comment voulez vous récupérer vos produits ?</p>
-	<br />
-		<div style="text-align:center;">
-			<button ng-click="selectedLivraison()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;">Livraison</button>
-			<button ng-click="selectedDrive()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;">Drive</button>
-		</div>
-		<br />
-		<div ng-if="menu==1">
-			Livraison pour : 
-			<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
-			<div class="text-center">
-              <a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-              <br /><br />
-          </div>
-		</div>
-		<div ng-if="menu==2">
-			Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
-			<div class="text-center">
-              <a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
-              <br /><br />
-          </div>
-		</div>
+			<h1>Choisissez votre mode de {{page}}</h1>
+			<br />
+			<p style="text-align: center">Comment voulez vous récupérer vos produits ?</p>
+			<br />
+			<div style="text-align:center;">
+				<button ng-click="selectedLivraison()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;">Livraison</button>
+				<button ng-click="selectedDrive()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;">Drive</button>
+			</div>
+			<br />
+			<div ng-if="menu==1">
+				Livraison pour : 
+				<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+				<div class="text-center">
+              		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              		<br /><br />
+          		</div>
+			</div>
+			<div ng-if="menu==2">
+				Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+				<div class="text-center">
+              		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              		<br /><br />
+          		</div>
+			</div>
+			<div style="text-align:center;">
+      			<a ng-click="go('client')" type="button" class="btn btn-primary">Retour</a>
+    		</div>
+    		<br /><br />
 		</div>
 	</div>
 		
