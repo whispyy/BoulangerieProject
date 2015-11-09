@@ -20,6 +20,7 @@
     "url": "https://github.com/whispyy/BoulangerieProject/issues"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "mongoose": "~4.2.4"
   }
 }
