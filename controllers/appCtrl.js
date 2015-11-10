@@ -75,12 +75,6 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 		} 
  	}
 
-	
-		
-	
-
-
-
 
 
 }]);
