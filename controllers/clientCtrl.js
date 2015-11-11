@@ -25,16 +25,41 @@ mieDore.controller('clientCtrl',['$scope', '$http', '$state', function($scope,$h
     	return datetime;
   	}
 
+  var method = 'POST';
+  var inserturl = 'http://localhost:8080/insertangularmongouser';
   $scope.submitClient = function(){
-    $http.post('/client', $scope.client, function(err,data){
-      if(err) {
-        console.log("Error on submitClient");
-      }
+    var formData = {
+      'prenom' : $scope.prenom,
+      'nom' : $scope.nom,
+      'adresse' : $scope.adresse,
+      'mail' : $scope.mail,
+      'tel' : $scope.tel,
+      'date' : $scope.date
+    };
+
+  var jdata = 'mydata='+JSON.stringify(formData);
+  $http({
+    method : method,
+    url : inserturl,
+    data : jdata,
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    cache: $templateCache
+  }),
+  success(function(response){
+    console.log("succes");
+    $scope.codeStatus = response.data;
+  }),
+  error(function(response){
+    console.log("erreur");
+    $scope.codeStatus = respons || "Requete échouée";
+  });
+  $scope.list = function(){
+    var url = 'http://localhost:8080/getangularusers';
+    $http.get(url).success(function(data){
+      $scope.client = data;
     });
-    
-  }
+  };
+  $scope.list();
+}
 
-
-
-}]);
 
