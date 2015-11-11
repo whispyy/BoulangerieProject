@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "express": "^4.13.3",
-    "mongoose": "~4.2.4"
+    "mongojs": "^1.4.1",
+    "mongoose": "~4.2.4",
+    "path": "^0.12.7"
   }
 }

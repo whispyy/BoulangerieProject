@@ -35,31 +35,36 @@ mieDore.controller('clientCtrl',['$scope', '$http', '$state', function($scope,$h
       'mail' : $scope.mail,
       'tel' : $scope.tel,
       'date' : $scope.date
-    };
+    }
+  
 
-  var jdata = 'mydata='+JSON.stringify(formData);
-  $http({
-    method : method,
-    url : inserturl,
-    data : jdata,
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    cache: $templateCache
-  }),
-  success(function(response){
-    console.log("succes");
-    $scope.codeStatus = response.data;
-  }),
-  error(function(response){
-    console.log("erreur");
-    $scope.codeStatus = respons || "Requete échouée";
-  });
-  $scope.list = function(){
-    var url = 'http://localhost:8080/getangularusers';
-    $http.get(url).success(function(data){
-      $scope.client = data;
+    var jdata='mydata='+(JSON.stringify(formData));
+
+    $http({
+      method : method,
+      url : inserturl,
+      data : jdata,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      cache: $templateCache
+    }),
+    success(function(response){
+      console.log("succes");
+      $scope.codeStatus = response.data;
+    }),
+    error(function(response){
+      console.log("erreur");
+      $scope.codeStatus = respons || "Requete échouée";
     });
+    $scope.list();
+    return false;
+  }
+  $scope.list = function(){
+      var url = 'http://localhost:8080/getangularusers';
+      $http.get(url).success(function(data){
+        $scope.client = data;
+      });
   };
   $scope.list();
-}
+}]);
 
 

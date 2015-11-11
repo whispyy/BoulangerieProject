@@ -1,4 +1,3 @@
-var mongoose = require('mongoose');
 var application_root = __dirname,
 	express = require('express'),
 	path = require('path');
@@ -8,10 +7,12 @@ var app = express();
 
 var databaseUrl = "db";
 var collections = ["client"]
-var db = require('mongojs').connect(databaseUrl, collections)
+var mongojs = require('mongojs');
+var db = mongojs(databaseUrl, collections)
 
 
 //Config
+/*
 app.configure(function(){
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
@@ -19,15 +20,15 @@ app.configure(function(){
 	app.use(express.static(path.join(application_root, "public")));
 	app.use(express.errorHandler({ dumbExceptions : true, showStack: true }));
 });
-
-app.get('/api', fuunction (req,res){
+*/
+app.get('/index.html', function (req,res){
 	req.send('Wesh Tanguy jai mis en place un serveur de ouuuuf');
 });
 
 app.get('/getangularusers', function (req, res) {
 	res.header("Access-Control-Allow-Origin", "http://localhost");
 	res.header("Access-Control-Allow-Methods", "GET, POST");
-	db.things.find('', function -(err, users){
+	db.things.find('', function (err, users){
 		if (err || !users)
 			console.log("Wesh jai pas trouvé d'utilisateur, et alors");
 		else
@@ -55,7 +56,7 @@ app.post('/insertangularmongouser', function (req, res){
 	db.things.save({prenom : jsonData.prenom, nom : jsonData.nom, adresse : jsonData.adresse, mail : jsonData.mail, tel : jsonData.tel, date : jsonData.date},
 		function(err, saved){
 			if(err || !saved)
-				res.end{"Client non sauvegardé"};
+				res.end("Client non sauvegardé");
 			else
 				res.end("Client sauvegardé");
 		});
