@@ -2,6 +2,11 @@
 GENERAL
 */
 
+@font-face {
+    font-family: "HelveticaBoulangerie";
+    src: url('ressources/font/helveticaneueltstd-webfont.ttf');
+}
+
 html{
 	background-color: #A16028;
 }
@@ -12,6 +17,13 @@ body{
 
 footer{
 	background-color: #A16028;
+}
+
+.mosaique p{
+	font-family: "Impact", Georgia, Serif;
+	color:lightgray;
+	margin-top:-35px;
+	font-size:25px;
 }
 
 /*
