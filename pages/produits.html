@@ -1,0 +1,100 @@
+<div class="container"><h1>Tous nos {{page}}</h1>
+<!--Categorie produits-->
+
+<div class="col-md-9">
+  <!--Produit Boulangerie-->
+  <div class="col-xs-6 col-md-3" ng-click="fboulangerie()">
+    <a href="#" class="thumbnail">
+      <img src="ressources/img/Boulangerie/baguette_parisienne.jpg" alt="...">
+    </a>
+    <p>Boulangerie</p>
+  </div>
+  <!--Produit Patisserie-->
+  <div class="col-xs-6 col-md-3" ng-click="fpatisserie()">
+    <a href="#" class="thumbnail">
+      <img src="ressources/img/Patisserie/individuelle/Flan.png" alt="...">
+    </a>
+    <p>Patisserie</p>
+  </div>
+  <!--Produit Sandwich-->
+  <div class="col-xs-6 col-md-3" ng-click="fsandwich()">
+    <a href="#" class="thumbnail">
+      <img src="ressources/img/Sandwich/Sandwich-jambon-emmental.jpg" alt="...">
+    </a>
+    <p>Sandwich</p>
+  </div>
+  <!--Produit Viennoiserie-->
+  <div class="col-xs-6 col-md-3" ng-click="fviennoiserie()">
+    <a href="#" class="thumbnail">
+      <img src="ressources/img/Viennoiserie/chocolatine.jpg" alt="...">
+    </a>
+    <p>Viennoiserie</p>
+  </div>
+
+
+<!--détails produits-->
+  <ul id="boulangerie" ng-show="boolBoulangerie">
+    <li ng-repeat="x in boulangerie">
+      {{ x }}
+    </li>
+  </ul>
+  <ul id="patisserie" ng-show="boolPatisserie">
+    <li>Gateau</li>
+    <ul>
+      <li ng-repeat="x in gateau">
+        {{ x }}
+      </li>
+    </ul>
+    <li>Individuelle</li>
+     <ul>
+      <li ng-repeat="x in individuelle">
+        {{x}}
+      </li>
+    </ul>
+    <li>Tarte</li>
+    <ul>
+      <li ng-repeat="x in tarte">
+        {{x}}
+      </li>
+    </ul>
+  </ul>
+  <ul id="sandwich" ng-show="boolSandwich">
+    <li ng-repeat="x in sandwich">
+      {{ x }}
+    </li>
+  </ul>
+  <ul id="viennoiserie" ng-show="boolViennoiserie">
+    <li ng-repeat="x in viennoiserie">
+      {{ x }}
+    </li>
+  </ul>
+
+  <div style="position:relative;float:center;">
+   <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; margin:20px;">Passer la commande !</button>
+  </div>
+</div>
+
+<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+         
+            <div class="panel panel-primary">
+              <div id="divTotal" class="panel-heading">
+                  <h3 class="panel-title">Mon panier</h3>
+              </div>
+              <div ng-if="panier[0] != undefined">
+              <div ng-repeat="item in panier" class="panel-body">
+                  <p><img style="width:15px;margin-left: -6px;margin-right: 5px;" src="ressources/moins.png" ng-click="delPanier(item)">{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix | number:2}} €</i></p>
+              </div>
+              <hr style="margin-top : -10px; margin-bottom:0px;">
+              <div class="panel-body">
+                  <p>Total<i style="float:right">{{prixPanier| number:2}} €</i></p>
+              </div>
+            </div>
+            <div ng-if="panier[0] == undefined" class="panel-body">
+              <p>Votre panier est vide</p>
+            </div>
+
+          </div>
+           <button ng-if="panier[0] != undefined" ng-click="go('client')" type="button" class="btn btn-primary" style="width: 100%; text-align:center;">Continuer</button>
+          
+        
+</div>

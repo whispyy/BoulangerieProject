@@ -1,0 +1,65 @@
+//Liste des produits
+
+$scope.boulangerie =
+	['baguette aux cereales',
+	'baguette paillard',
+	'baguette parisienne',
+	'baguette pavot',
+	'batard blé',
+	'batard cereales',
+	'Marguerite au pain blanc',
+	'mont royal'];
+
+
+	$scope.patisserie =
+	['gateau',
+	'individuelle',
+	'tarte'];
+
+	$scope.gateau = [
+		'Foret noire',
+		'Fraisier',
+		'Grand mille feuilles',
+		'Grand paris brest',
+		'Mousse abricot',
+		'Mousse fruits rouges',
+		'Senseo'];
+	$scope.individuelle =
+		['Eclair au café',
+		'Eclair au chocolat',
+		'Flan',
+		'Meringue chocolat',
+		'Petit mille feuilles',
+		'Religieuse au café',
+		'Religieuse au chocolat'
+		];
+	$scope.tarte =
+		['Tarte aux fraises',
+		'Tarte aux pommes',
+		'Tarte carachoc',
+		'Tarte au citron-meringue'];
+
+
+	$scope.sandwich =
+		['jambon emmental',
+		'jambon serrano',
+		'poulet et fromage de chèvre',
+		'poulet mayonnaise',
+		'sauomn et fromage frais',
+		'thon mayonnaise'];
+
+
+	$scope.viennoiserie =
+		['abricotier',
+		'amandier',
+		'brioche au chocolat',
+		'brioche nature',
+		'brioche orange et chocolat blanc',
+		'chausson au pommes',
+		'chocolatine',
+		'croissant',
+		'escargot raisin',
+		'patte d ours',
+		'tentation',
+		'torsade au chocolat'];
+		

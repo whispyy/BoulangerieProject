@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr" ng-app="mieDore">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="ressources/logo.png" />
+  <title>ChronoPain</title>
+  <!--css-->
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href"bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <!--javascript-->
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+  <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+      <script src="bootstrap/js/bootstrap.js"></script>
+      <script src="js/script.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="controllers/appCtrl.js"></script>
+    <script src="controllers/homeCtrl.js"></script>
+    <script src="controllers/produitsCtrl.js"></script>
+    <script src="controllers/contactCtrl.js"></script>
+    <script src="controllers/aboutCtrl.js"></script>
+    <script src="controllers/clientCtrl.js"></script>
+    <script src="controllers/livraisonCtrl.js"></script>
+    <script src="controllers/payerCtrl.js"></script>
+</head>
+<body style="background-image:url(ressources/pain.jpg); background-repeat:no-repeat; background-position:center center;" ng-app="mieDore" ng-controller="appCtrl">
+	<header>
+    <nav class="navbar" id="navjf">
+      <div class="container-fluid">
+          <div class="navbar-header">
+                <p style="margin-top:2px;"><a class="navbar-brand" ng-click="go('home')"><img src="ressources/logo.png" width="40px"/></a>
+                <a id="JFbrand" ng-click="go('home')">Chronopain.fr</a></p>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                    <li class="active" ng-click="go('home')">Accueil</li>
+                    <li ng-click="go('produits')">Produits</li>
+                    <li ng-click="go('about')">About</li>
+                    <li ng-click="go('contact')">Contact</li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </header>
+
+              <!-- angular templating -->
+            <!-- this is where content will be injected -->
+      <div ui-view></div>
+
+
+
+</body>
+<footer>
+  <div class="foot">
+    <h3>Information</h3>
+    <p ng-click="go('contact')">Contactez nous</p>
+    <p ng-click="go('about')">A propos</p>
+  </div>
+  <div class="foot">
+    <h3>En savoir plus... </h3>
+    <p>Mentions Légales</p>
+    <p>Conditions générales</p>
+  </div>
+  <ul class="socials">
+    <li>
+      <a href="https://facebook.com">F</a>
+    </li>
+    <li>
+      <a href="twitter.com">T</a>
+    </li>
+    <li>
+      <a href="mailto:contact@chronopain.fr">C</a>
+    </li>
+  </ul>
+  <div class="copyright">© 2015 - Chronopain.fr</div>
+</footer>
+</html>

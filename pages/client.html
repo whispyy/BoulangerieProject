@@ -1,0 +1,83 @@
+<div class="container">
+	<div class="step">
+		<img style="width:25px;margin-top:3px;margin-bottom:3px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png">    ...    <img style="width:25px;" src="ressources/number3.png"> <img style="width:25px;" src="ressources/number4.png">
+	</div>
+<div class="col-md-9" >
+	<div class="transp">
+		<div style="margin:25px;padding-top: 10px;">
+	<h1>Entrez vos informations {{page}}</h1>
+	<br /><br />
+		<div class="row" >
+			<div class="col-md-3">
+				Nom : 
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="client.nom" ng-click="client.nom =''">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Prénom : 
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="client.prenom" ng-click="client.prenom =''">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Adresse : 
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="client.adresse" ng-click="client.adresse =''">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Mail : 
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="client.mail" ng-click="client.mail =''">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				Téléphone : 
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="client.tel" ng-click="client.tel =''">
+			</div>
+		</div>
+	</div>
+	<input type="Submit" ng-click="add()"/>
+	<div style="text-align:center;">
+		<a ng-click="go('home')" type="button" class="btn btn-primary" style="background-color:#FD7E01 !important;border-color:#FD7E01!important;">Retour</a>
+		<a ng-click="add(); go('livraison')" type="button" class="btn btn-primary" style="background-color:#FD7E01 !important;border-color:#FD7E01!important;">Continuer</a>
+	</div>
+	<br /><br />
+</div>
+</div>
+<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+         
+            <div class="panel panel-primary">
+              <div id="divTotal" class="panel-heading">
+                  <h3 class="panel-title">Mon panier</h3>
+              </div>
+              <div ng-if="panier[0] != undefined">
+              <div ng-repeat="item in panier" class="panel-body">
+                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix| number:2}} €</i></p>
+              </div>
+              <hr style="margin-top : -10px; margin-bottom:0px;">
+              <div class="panel-body">
+                  <p>Total<i style="float:right">{{prixPanier| number:2}} €</i></p>
+              </div>
+            </div>
+            <div ng-if="panier[0] == undefined" class="panel-body">
+              <p>Votre panier est vide</p>
+            </div>
+
+          </div>
+          
+        
+</div>
+
+</div>

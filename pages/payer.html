@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row">
+    <div class="step">
+    <img style="width:25px;margin-top:3px;margin-bottom:3px;" src="ressources/number1-OK.png"> <img style="width:25px;" src="ressources/number2-OK.png"> <img style="width:25px;" src="ressources/number3-OK.png"> <img style="width:25px;" src="ressources/number4-OK.png">
+  </div>
+<div class="col-md-9" >
+	 
+	<div style="margin-left:10%" class="transp">
+    <div style="margin:25px;padding-top: 10px;">
+	  <h1>Vous pouvez maintenant {{page}}</h1>
+    <br /><br />
+    <h2 style="text-align: justify">
+	   Oups, votre ville n'est pas encore desservie par nos services. Nos équipes mettent tout en oeuvre pour vous permettre l'accès à la boulangerie du futur au plus vite.
+    <h2>
+    <br />
+    <div style="text-align:center;">
+      <a ng-click="go('home')" type="button" class="btn btn-primary" style="background-color:#FD7E01 !important;border-color:#FD7E01!important;"  >Retour</a>
+    </div>
+    <br />
+	</div>
+</div>
+		
+</div>
+<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+         
+            <div class="panel panel-primary">
+              <div id="divTotal" class="panel-heading">
+                  <h3 class="panel-title">Mon panier</h3>
+              </div>
+              <div ng-if="panier[0] != undefined">
+              <div ng-repeat="item in panier" class="panel-body">
+                  <p>{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix | number:2}} €</i></p>
+              </div>
+              <hr style="margin-top : -10px; margin-bottom:0px;">
+              <div class="panel-body">
+                  <p>Total<i style="float:right">{{prixPanier| number:2}} €</i></p>
+              </div>
+            </div>
+            <div ng-if="panier[0] == undefined" class="panel-body">
+              <p>Votre panier est vide</p>
+            </div>
+
+          </div>
+          
+        
+</div>
+</div>
+</div>
