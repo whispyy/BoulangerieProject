@@ -36,7 +36,8 @@ mieDore.controller('clientCtrl',['$scope', '$state', '$http', function($scope,$s
         prenom: $scope.client.prenom,
         adresse: $scope.client.adresse,
         mail: $scope.client.mail,
-        tel: $scope.client.tel
+        tel: $scope.client.tel,
+        date : currentDateTime()
       },
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })

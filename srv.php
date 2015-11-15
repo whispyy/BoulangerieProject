@@ -8,6 +8,7 @@ $request = json_decode($postdata);
 @$adresse = $request->adresse;
 @$mail = $request->mail;
 @$tel = $request->tel;
+@$date = $request->date;
 
 //connexion a db
 $conn = mysqli_connect("localhost","jf2","chronopain","boulangerie");
@@ -18,13 +19,14 @@ if ($conn->connection_error){
 }
 
 //inserer les données dans la table client
-mysqli_query($conn,"INSERT INTO client (prenom,nom,adresse,mail,tel)
+mysqli_query($conn,"INSERT INTO client (prenom,nom,adresse,mail,tel,date)
 VALUES ('$prenom',
 	 '$nom',
 	 '$adresse',
 	 '$mail',
-	 '$tel')");
+	 '$tel',
+	 '$date')");
 //fermer la connexion et renvoyer le nom inséré
 mysql_close($conn);
-echo $nom;
+echo $date;
 ?>
