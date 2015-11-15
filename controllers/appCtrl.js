@@ -23,9 +23,9 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 	$scope.populaires.push(pop2);
 	$scope.populaires.push(pop3);
 
-	$scope.go = function(path) {
-		console.log(path);
-		$state.go(path);
+	$scope.go = function(path,param) {
+		console.log(path,param);
+		$state.go(path, param);
 	};	
  	
  	$scope.calculPrixPanier = function()

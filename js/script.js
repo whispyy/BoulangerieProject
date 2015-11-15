@@ -14,7 +14,7 @@
         controller: 'homeCtrl'
     })
     .state('produits', {
-        url: '/produits',
+        url: '/produits/:category',
         templateUrl: 'pages/produits.html',
         controller: 'produitsCtrl'
     })

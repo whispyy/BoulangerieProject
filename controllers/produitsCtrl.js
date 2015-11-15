@@ -1,10 +1,33 @@
 'use strict';
 
-mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
+mieDore.controller('produitsCtrl',['$scope', '$state','$stateParams', function($scope,$state,$stateParams){
 
 
 	console.log("produitsCtrl");
 	$scope.page = "produits";
+
+	//Attention il faudra faire le get en fonction du paramètre reçu
+	if($stateParams.category == 1)
+	{
+		//on fait le get sur de la boulangerie
+	}
+
+	if($stateParams.category == 2)
+	{
+		//on fait le get sur du sandwich
+	}
+
+	if($stateParams.category == 3)
+	{
+		//on fait le get sur de la viennoiserie
+	}
+
+	if($stateParams.category == 4)
+	{
+		//on fait le get sur de la patisserie
+	}
+
+
 
 	$scope.boolBoulangerie = false;
 	$scope.fboulangerie = function() {

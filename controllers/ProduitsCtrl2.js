@@ -6,6 +6,8 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	console.log("produitsCtrl");
 	$scope.page = "produits";
 
+	//Attention il faudra faire le get en fonction du paramètre reçu
+
 	$scope.boolBoulangerie = false;
 	$scope.fboulangerie = function() {
 		$scope.boolBoulangerie = !$scope.boolBoulangerie;
