@@ -12,13 +12,19 @@
  <div class="im-centered">
 	<div class="row"> <!--Top Products-->
   
-       <div ng-repeat="populaire in populaires" class="col-xs-6 col-md-3">
+       <div style="z-index=3;" ng-repeat="populaire in populaires" class="col-xs-6 col-md-3">
     <h4>{{populaire.nom}}</h4>
     <a href="#" class="thumbnail">
       <img style="width:150px; height:100px;" ng-src="{{populaire.src}}" alt="{{populaire.nom}}">
     </a>
+    <div style="margin-top:-20px;float:left;z-index:7;position:relative;">
+      <img ng-click="delPanier2(populaire);" style="margin-left:5px;margin-bottom:5px;width:15px;" src ="ressources/moins-detail.png">
+    </div>
+    <div style="margin-top:-20px;float:right;z-index:7;position:relative;">
+      <img ng-click="populaire.quantite=1;addPanier(populaire);" style="margin-right:5px;margin-bottom:5px;width:15px;" src ="ressources/plus-detail.png">
+    </div>
     
-      <p style="margin-top:7px;">{{populaire.prix | number:2}} € <select style="margin-left: 20px;" ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+      <p style="margin-top:7px;font-family:impact;">{{populaire.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="populaire.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
       </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(populaire)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
   
    </div>
