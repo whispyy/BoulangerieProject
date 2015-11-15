@@ -2,12 +2,38 @@
 
 mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http,$state){
 
-	$scope.idUser = 1; //faire le get pour que chaque fois qu'un mec se connecte on ait un idUser différent, ca nous permettra de savoir combien de visites et combien vont au terme
-	$scope.prixPanier = 0;
-	$scope.message = "appCtrl";
+	$scope.client={};
+  	$scope.client.nom = "Dupuis"; 
+	$scope.client.prenom = "Martin";
+ 	$scope.client.adresse = "Rue de la Liberté, 75000 Paris";
+ 	$scope.client.mail = "martin@dupuis.com";
+ 	$scope.client.tel = "0606060606";
 
+	$scope.idUser = $scope.client.nom+$scope.client.prenom;
+	$scope.prixPanier = 0;
 	$scope.panier=[];
 
+	/*
+	$scope.recupid = function(){
+		$http({
+     	  method: 'POST',
+    	  url: 'controllers/client.php',
+      	  data: {
+        	nom: $scope.client.nom,
+        	prenom: $scope.client.prenom,
+        	prix : $scope.prixPanier
+      },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+    .success(function(response) {
+        console.log("idUser : "+response);
+        $scope.idUser = response;
+    })
+    .error(function(response) {
+        console.log(response || "Request failed");
+    }); 
+    };
+	*/
 	//------- Pour ajouter au besoin des articles au panier -----------------//
 
 	/*var item={'id':1,'nom' : "Baguette Parisienne", 'prix': 2.10, 'quantite' : 2};

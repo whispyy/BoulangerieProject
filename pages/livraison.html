@@ -19,14 +19,14 @@
 				Livraison pour : 
 				<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
 				<div class="text-center">
-              		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              		<a ng-click="add(); go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
           		</div>
 			</div>
 			<div ng-if="menu==2">
 				Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
 				<div class="text-center">
-              		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+              		<a ng-click="add(); go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
           		</div>
 			</div>

@@ -1,17 +1,8 @@
 'use strict';
 
 mieDore.controller('clientCtrl',['$scope', '$state', '$http', function($scope,$state,$http){
-
-
-	console.log("clientCtrl");
 	$scope.page = "client";
 
-	$scope.client={};
-  $scope.client.nom = "Dupuis"; 
-	$scope.client.prenom = "Martin";
- 	$scope.client.adresse = "Rue de la Liberté, 75000 Paris";
- 	$scope.client.mail = "martin@dupuis.com";
- 	$scope.client.tel = "0606060606";
 
 		
 	var currentDateTime = function() {
@@ -25,19 +16,19 @@ mieDore.controller('clientCtrl',['$scope', '$state', '$http', function($scope,$s
     	return datetime;
   	}
 
-
   $scope.codeStatus = "";
   $scope.add = function() {
     $http({
       method: 'POST',
-      url: 'srv.php',
+      url: 'controllers/client.php',
       data: {
         nom: $scope.client.nom,
         prenom: $scope.client.prenom,
         adresse: $scope.client.adresse,
         mail: $scope.client.mail,
         tel: $scope.client.tel,
-        date : currentDateTime()
+        date : currentDateTime(),
+        prix : $scope.prixPanier
       },
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })

@@ -1,6 +1,6 @@
 'use strict';
 
-mieDore.controller('livraisonCtrl',['$scope', '$state', function($scope,$state){
+mieDore.controller('livraisonCtrl',['$scope', '$state', '$http', function($scope,$state,$http){
 
 	var date = new Date();
 	$scope.heure = parseInt(date.getHours());
@@ -54,6 +54,26 @@ mieDore.controller('livraisonCtrl',['$scope', '$state', function($scope,$state){
 		$scope.menu=1;
 	} 
 
+
+$scope.add = function() {
+	console.log($scope.listes);
+    $http({
+      method: 'POST',
+      url: 'controllers/livraison.php',
+      data: {
+        client: $scope.idUser,
+        mode: $scope.menu,
+        heure: $scope.listes
+      },
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+    .success(function(response) {
+        console.log("mode : "+response);
+    })
+    .error(function(response) {
+        console.log(response || "Request failed");
+    }); 
+  };
 
 
 

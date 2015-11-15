@@ -3,12 +3,9 @@
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 
-@$prenom = $request->prenom;
-@$nom = $request->nom;
-@$adresse = $request->adresse;
-@$mail = $request->mail;
-@$tel = $request->tel;
-@$date = $request->date;
+@$client = $request->client;
+@$mode = $request->mode;
+@$heure =$request->heure;
 
 //connexion a db
 $conn = mysqli_connect("localhost","jf2","chronopain","boulangerie");
@@ -19,14 +16,10 @@ if ($conn->connection_error){
 }
 
 //inserer les données dans la table client
-mysqli_query($conn,"INSERT INTO client (prenom,nom,adresse,mail,tel,date)
-VALUES ('$prenom',
-	 '$nom',
-	 '$adresse',
-	 '$mail',
-	 '$tel',
-	 '$date')");
-//fermer la connexion et renvoyer le nom inséré
+mysqli_query($conn,"INSERT INTO livraison (client,mode,heure)
+VALUES ('$client',
+	    '$mode',
+	    '$heure')");
 mysql_close($conn);
-echo $date;
+echo $mode;
 ?>
