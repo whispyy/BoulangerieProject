@@ -18,11 +18,12 @@
 			<div ng-if="menu==1">
 				Livraison pour : 
 				<select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
-				<div ng-if="test.valueHour">
+				<select ng-model="test.valueMinutes" ng-options="minute.t for minute in minutes"></select>
+				<div ng-if="test.valueHour && test.valueMinutes">
 					<h3>Récapitulatif de livraison :</h3>
 					<p>Personne : </p>
 					<p>Adresse : </p>
-					<p>Heure de livraison : {{test.valueHour.t}} </p>
+					<p>Heure de livraison : {{test.valueHour.t}} {{test.valueMinutes.t}} </p>
 				</div>
 				<div class="text-center">
               		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
@@ -32,10 +33,11 @@
 			</div>
 			<div ng-if="menu==2">
 				Drive a récupéré pour : <select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
-				<div ng-if="test.valueHour">
+				<select ng-model="test.valueMinutes" ng-options="minute.t for minute in minutes"></select>
+				<div ng-if="test.valueHour && test.valueMinutes">
 					<h3>Récapitulatif de livraison :</h3>
 					<p>Personne : </p>
-					<p>Heure de collecte : {{test.valueHour.t}} </p>
+					<p>Heure de collecte : {{test.valueHour.t}} {{test.valueMinutes.t}}</p>
 				</div>
 				<div class="text-center">
               		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
