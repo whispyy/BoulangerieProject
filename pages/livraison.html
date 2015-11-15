@@ -11,20 +11,32 @@
 			<p style="text-align: center">Comment voulez vous récupérer vos produits ?</p>
 			<br />
 			<div style="text-align:center;">
-				<button ng-click="selectedLivraison()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;background-color:#FD7E01 !important;border-color:#FD7E01!important;">Livraison</button>
-				<button ng-click="selectedDrive()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;background-color:#FD7E01 !important;border-color:#FD7E01!important;">Drive</button>
+				<button ng-click="test=undefined;selectedLivraison()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;background-color:#FD7E01 !important;border-color:#FD7E01!important;">Livraison</button>
+				<button ng-click="test=undefined;selectedDrive()" type="button" class="btn btn-primary" style="width: 100px; text-align:center;background-color:#FD7E01 !important;border-color:#FD7E01!important;">Drive</button>
 			</div>
 			<br />
 			<div ng-if="menu==1">
 				Livraison pour : 
-				<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+				<select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
+				<div ng-if="test.valueHour">
+					<h3>Récapitulatif de livraison :</h3>
+					<p>Personne : </p>
+					<p>Adresse : </p>
+					<p>Heure de livraison : {{test.valueHour.t}} </p>
+				</div>
 				<div class="text-center">
               		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
           		</div>
+          		
 			</div>
 			<div ng-if="menu==2">
-				Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+				Drive a récupéré pour : <select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
+				<div ng-if="test.valueHour">
+					<h3>Récapitulatif de livraison :</h3>
+					<p>Personne : </p>
+					<p>Heure de collecte : {{test.valueHour.t}} </p>
+				</div>
 				<div class="text-center">
               		<a ng-click="go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
