@@ -49,7 +49,7 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		},
 		{
 			'id':102,
-			'nom':'indiv'id'uelle',
+			'nom':'individuelle',
 		},
 		{
 			'id':103,
@@ -91,7 +91,7 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 			'nom': 'Senseo',
 			'prix':1,
 		}];
-	$scope.indiv'id'uelle =
+	$scope.individuelle =
 		[{
 			'id':121,
 			'nom':'Eclair au café',

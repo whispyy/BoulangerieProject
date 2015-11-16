@@ -117,3 +117,14 @@ footer
 	border-color:#A16028 !important;
 }
  
+
+
+/*
+PRODUITS 
+*/
+.prod{
+	float: left;
+}
+.prod li{
+	list-style: none;
+}

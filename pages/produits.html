@@ -1,73 +1,65 @@
 <div class="container"><h1>Tous nos {{page}}</h1>
-<!--Categorie produits-->
+
 
 <div class="col-md-9">
-  <!--Produit Boulangerie-->
-  <div class="col-xs-6 col-md-3" ng-click="fboulangerie()">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Boulangerie/baguette_parisienne.jpg" alt="...">
-    </a>
-    <p>Boulangerie</p>
-  </div>
-  <!--Produit Patisserie-->
-  <div class="col-xs-6 col-md-3" ng-click="fpatisserie()">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Patisserie/individuelle/Flan.png" alt="...">
-    </a>
-    <p>Patisserie</p>
-  </div>
-  <!--Produit Sandwich-->
-  <div class="col-xs-6 col-md-3" ng-click="fsandwich()">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Sandwich/Sandwich-jambon-emmental.jpg" alt="...">
-    </a>
-    <p>Sandwich</p>
-  </div>
-  <!--Produit Viennoiserie-->
-  <div class="col-xs-6 col-md-3" ng-click="fviennoiserie()">
-    <a href="#" class="thumbnail">
-      <img src="ressources/img/Viennoiserie/chocolatine.jpg" alt="...">
-    </a>
-    <p>Viennoiserie</p>
-  </div>
 
-
-<!--détails produits-->
-  <ul id="boulangerie" ng-show="boolBoulangerie">
+<div class="prod">
+  <h2>Boulangerie</h2>
+  <ul id="boulangerie">
     <li ng-repeat="x in boulangerie">
-      {{ x }}
+      {{ x.nom }}
     </li>
   </ul>
-  <ul id="patisserie" ng-show="boolPatisserie">
+</div>
+<div class="prod">
+  <h2>Patisserie</h2>
+  <ul id="patisserie">
     <li>Gateau</li>
-    <ul>
-      <li ng-repeat="x in gateau">
-        {{ x }}
-      </li>
-    </ul>
+    <li>
+      <ul>
+        <li ng-repeat="x in gateau">
+          {{x.nom}}
+        </li>
+      </ul>        
+    </li>
     <li>Individuelle</li>
-     <ul>
-      <li ng-repeat="x in individuelle">
-        {{x}}
-      </li>
-    </ul>
+    <li>
+      <ul>
+        <li ng-repeat="x in individuelle">
+          {{x.nom}}
+        </li>
+      </ul> 
+    </li>
     <li>Tarte</li>
-    <ul>
-      <li ng-repeat="x in tarte">
-        {{x}}
-      </li>
-    </ul>
+    <li>
+      <ul>
+        <li ng-repeat="x in tarte">
+          {{x.nom}}
+        </li>
+      </ul> 
+    </li>
   </ul>
-  <ul id="sandwich" ng-show="boolSandwich">
+</div>
+<div class="prod">
+  <h2>Sandwich</h2>
+  <ul id="sandwich">
     <li ng-repeat="x in sandwich">
-      {{ x }}
+      {{ x.nom }}
     </li>
   </ul>
-  <ul id="viennoiserie" ng-show="boolViennoiserie">
+</div>
+<div class="prod">
+  <h2>Viennoiserie</h2>
+  <ul id="viennoiserie">
     <li ng-repeat="x in viennoiserie">
-      {{ x }}
+      {{ x.nom }}
     </li>
   </ul>
+</div>
+
+
+
+
 
   <div style="position:relative;float:center;">
    <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; margin:20px;">Passer la commande !</button>
