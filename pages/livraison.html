@@ -17,14 +17,27 @@
 			<br />
 			<div ng-if="menu==1">
 				Livraison pour : 
-				<select ng-model="liste" ng-options="liste.t for liste in listes"></select>
-				<div class="text-center">
+				<select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
+				<select ng-model="test.valueMinutes" ng-options="minute.t for minute in minutes"></select>
+				<div ng-if="test.valueHour && test.valueMinutes">
+					<h3>Récapitulatif de livraison :</h3>
+					<p>Personne : {{client.prenom+" "+client.nom}}</p>
+					<p>Adresse : {{client.adresse}}</p>
+					<p>Heure de livraison : {{test.valueHour.t}} {{test.valueMinutes.t}} </p>
+				</div>
               		<a ng-click="add(); go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
           		</div>
 			</div>
 			<div ng-if="menu==2">
-				Drive a récupéré pour : <select ng-model="liste" ng-options="liste.t for liste in listes"></select>
+				Drive a récupéré pour :
+				<select ng-model="test.valueHour" ng-options="liste.t for liste in listes"></select>
+				<select ng-model="test.valueMinutes" ng-options="minute.t for minute in minutes"></select>
+				<div ng-if="test.valueHour && test.valueMinutes">
+					<h3>Récapitulatif de livraison :</h3>
+					<p>Personne : {{client.prenom+" "+client.nom}}</p>
+					<p>Heure de collecte : {{test.valueHour.t}} {{test.valueMinutes.t}}</p>
+				</div>
 				<div class="text-center">
               		<a ng-click="add(); go('payer')" class="btn btn-danger">Continuer <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
               		<br /><br />
