@@ -81,7 +81,7 @@ footer
 	display: block;
     height: 32px;
     width: 32px;
-    background: transparent url("ressources/icons.svg") no-repeat scroll -32px 0px;
+    /*background: transparent url("ressources/icons.svg") no-repeat scroll -32px 0px;*/
 }
 
 .copyright{
@@ -124,7 +124,16 @@ PRODUITS
 */
 .prod{
 	float: left;
+	background-color: white;
+	margin: 5px;
+	padding-right: 5px;
+	border-radius: 10px;
+	opacity:0.7;
 }
 .prod li{
+	cursor: crosshair;
 	list-style: none;
+}
+.prod li:hover{
+	font-weight: bold;
 }

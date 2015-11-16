@@ -7,108 +7,109 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 	$scope.page = "produits";
 
 	$scope.boulangerie = [];
-	$scope.boulangerie.push({'id':901,'nom':'baguette aux cereales','prix':1});
-	$scope.boulangerie.push({'id':902,'nom':'baguette tradition','prix':1});
-	$scope.boulangerie.push({'id':903,'nom':'baguette','prix':1});
-	$scope.boulangerie.push({'id':904,'nom':'baguette pavot','prix':1});
-	$scope.boulangerie.push({'id':905,'nom':'pain au blé','prix':1});
-	$scope.boulangerie.push({'id':906,'nom':'pains aux céréales','prix':1});	
-	$scope.boulangerie.push({'id':907,'nom':'Marguerite sésame pavot','prix':1});
-	$scope.boulangerie.push({'id':908,'nom':'mont royal','prix':1});
-
+	$scope.boulangerie.push({'id':901,'nom':'Baguette aux cereales','prix':1.10});
+	$scope.boulangerie.push({'id':902,'nom':'Baguette tradition','prix':1.00});
+	$scope.boulangerie.push({'id':903,'nom':'Baguette','prix':0.95});
+	$scope.boulangerie.push({'id':904,'nom':'Baguette pavot','prix':1.10});
+	$scope.boulangerie.push({'id':905,'nom':'Pain au blé','prix':1.80});
+	$scope.boulangerie.push({'id':906,'nom':'Pain aux céréales','prix':1.95});	
+	$scope.boulangerie.push({'id':907,'nom':'Marguerite sésame pavot','prix':2.20});
+	$scope.boulangerie.push({'id':908,'nom':'Mont royal','prix':1.95});
+	$scope.boulangerie.push({'id':909,'nom':'Campagnard','prix':2.50});
+	$scope.boulangerie.push({'id':910,'nom':'Boule bio','prix':1.30});
 
 	$scope.gateau = 
 		[{
 			'id':111,
 			'nom':'Foret noire',
-			'prix':1
+			'prix':21.00
 		},
 		{
 			'id':112,
 			'nom':'Fraisier',
-			'prix':1
+			'prix':21.00
 		},
 		{
 			'id':113,
 			'nom':'Grand mille feuilles',
-			'prix':1
+			'prix':18.00
 		},
 		{
 			'id':114,
 			'nom':'Grand paris brest',
-			'prix':1
+			'prix':18.00
 		},
 		{
 			'id':115,
 			'nom':'Mousse abricot',
-			'prix':1
+			'prix':21.00
 		},
 		{
 			'id':116,
 			'nom': 'Mousse fruits rouges',
-			'prix':1
+			'prix':21.00
 		},
 		{
 			'id':117,
 			'nom': 'Senseo',
-			'prix':1
+			'prix':18.00
 		}];
 	$scope.individuelle =
 		[{
 			'id':121,
 			'nom':'Eclair au café',
-			'prix':1
+			'prix':2.20
 		 },
 		 {
 		 	'id':122,
 		 	'nom':'Eclair au chocolat',
-		 	'prix':1
+		 	'prix':2.20
 		 },
 		 {
 		 	'id': 123,
 		 	'nom':'Flan',
-		 	'prix':1
+		 	'prix':2.30
 		 },
 		 {
 		 	'id':124,
 		 	'nom':'Meringue chocolat',
-		 	'prix':1
+		 	'prix':2.50
 		 },
 		 {
 		 	'id':125,
 		 	'nom':'Petit mille feuilles',
-		 	'prix':1
+		 	'prix':2.50
 		 },
 		 {
 		 	'id':126,
 		 	'nom':'Religieuse au café',
-		 	'prix':1
+		 	'prix':2.40
 		 },
 		 {
 		 	'id':127,
 		 	'nom':'Religieuse au chocolat',
-		 	'prix':1
+		 	'prix':2.40
 		}];
 	$scope.tarte =
 		[{
 			'id':131,
 			'nom':'Tarte aux fraises',
-			'prix':1
+			'prix':18.00
 		},
 		{
 			'id':132,
 			'nom':'Tarte aux pommes',
-			'prix':1
+			'prix':12.00
 		},
 		{
 			'id':133,
 			'nom':'Tarte carachoc',
-			'prix':1
+			'prix':21.00
 		},
 		{
 			'id':134,
 			'nom':'Tarte au citron-meringue',
-			'prix':1
+			'prix':15.60
 		}];
 
 
@@ -116,32 +117,32 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		[{
 			'id':201 ,
 			'nom':'jambon emmental',
-			'prix':1
+			'prix':3.50
 		},
 		{
 			'id':202,
 			'nom':'jambon serrano',
-			'prix':1
+			'prix':3.50
 		},
 		{
 			'id':203,
 			'nom':'poulet et fromage de chèvre',
-			'prix':1
+			'prix':3.50
 		},
 		{
 			'id':204,
 			'nom':'poulet mayonnaise',
-			'prix':1
+			'prix':3.50
 		},
 		{
 			'id':205,
 			'nom':'saumon et fromage frais',
-			'prix':1
+			'prix':3.80
 		},
 		{
 			'id':206,
 			'nom':'thon mayonnaise',
-			'prix':1
+			'prix':3.50
 		}];
 
 
@@ -149,61 +150,61 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		[{
 			'id':301,
 			'nom':'abricotier',
-			'prix':1
+			'prix':1.50
 		},
 		{
 			'id':302,
 			'nom':'amandier',
-			'prix':1
+			'prix':2.00
 		},
 		{
 			'id':303,
 			'nom':'brioche au chocolat',
-			'prix':1
+			'prix':1.00
 		},
 		{
 			'id':304,
 			'nom':'brioche nature',
-			'prix':1
+			'prix':0.95
 		},
 		{
 			'id':305,
 			'nom':'brioche orange et chocolat blanc',
-			'prix':1
+			'prix':1.10
 		},
 		{
 			'id':306,
 			'nom':'chausson au pommes',
-			'prix':1
+			'prix':1.00
 		},
 		{
 			'id':307,
 			'nom':'Pain au chocolat',
-			'prix':1
+			'prix':0.95
 		},
 		{
 			'id':308,
 			'nom':'croissant',
-			'prix':1
+			'prix':0.90
 		},
 		{
 			'id':309,
 			'nom':'escargot raisin',
-			'prix':1
+			'prix':1.80
 		},
 		{
 			'id':310,
 			'nom':'patte d ours',
-			'prix':1
+			'prix':1.50
 		},
 		{
 			'id':311,
 			'nom':'tentation',
-			'prix':1
+			'prix':2.00
 		},
 		{
 			'id':312,
 			'nom':'torsade au chocolat',
-			'prix':1
+			'prix':2.00
 		}];
 }]);
