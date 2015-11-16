@@ -10,7 +10,7 @@ $request = json_decode($postdata);
 @$tel = $request->tel;
 @$date = $request->date;
 @$prix = $request->prix;
-
+@$panier = $request->panier;
 
 //connexion a db
 $conn = mysqli_connect("localhost","jf2","chronopain","boulangerie");
@@ -21,14 +21,15 @@ if ($conn->connection_error){
 }
 
 //inserer les données dans la table client
-mysqli_query($conn,"INSERT INTO client (prenom,nom,adresse,mail,tel,date,prix)
+mysqli_query($conn,"INSERT INTO client (prenom,nom,adresse,mail,tel,date,prix,panier)
 VALUES ('$prenom',
 	 '$nom',
 	 '$adresse',
 	 '$mail',
 	 '$tel',
 	 '$date',
-	 '$prix')");
+	 '$prix',
+	 '$panier')");
 
 //fermer la connexion et renvoyer le nom inséré
 mysqli_close($conn);

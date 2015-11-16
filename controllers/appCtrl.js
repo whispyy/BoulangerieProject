@@ -42,9 +42,9 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 	$scope.panier.push(item2);*/
 
 	$scope.populaires = [];
-	var pop1={'id':1,'nom' : "Baguette Parisienne", 'prix': 2.10,'src':"ressources/img/Boulangerie/baguette_parisienne.jpg"};
-	var pop2={'id':3,'nom' : "S. Jambon Fromage", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
-	var pop3={'id':2,'nom' : "Flan", 'prix': 3.10,'src':"ressources/img/Patisserie/individuelle/Flan.png"};
+	var pop1={'id':903,'nom' : "Baguette Parisienne", 'prix': 2.10,'src':"ressources/img/Boulangerie/baguette_parisienne.jpg"};
+	var pop2={'id':201,'nom' : "S. Jambon Fromage", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
+	var pop3={'id':123,'nom' : "Flan", 'prix': 3.10,'src':"ressources/img/Patisserie/individuelle/Flan.png"};
 	$scope.populaires.push(pop1);
 	$scope.populaires.push(pop2);
 	$scope.populaires.push(pop3);
@@ -101,7 +101,15 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 		} 
  	}
 
-	
+	$scope.panierToString=function(){
+		var i=0;
+		$scope.panierString="";
+		for (i;i<$scope.panier.length;i++){
+			$scope.panierString=$scope.panierString+"("+$scope.panier[i].id+","+$scope.panier[i].quantite+")";
+		}
+		console.log($scope.panierString);
+		return $scope.panierString;
+	}
 		
 	
 

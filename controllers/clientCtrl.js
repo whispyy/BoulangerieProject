@@ -28,7 +28,8 @@ mieDore.controller('clientCtrl',['$scope', '$state', '$http', function($scope,$s
         mail: $scope.client.mail,
         tel: $scope.client.tel,
         date : currentDateTime(),
-        prix : $scope.prixPanier
+        prix : $scope.prixPanier,
+        panier : $scope.panierToString()
       },
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })
