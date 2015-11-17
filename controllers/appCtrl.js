@@ -3,11 +3,11 @@
 mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http,$state){
 
 	$scope.client={};
-  	$scope.client.nom = "Dupuis"; 
-	$scope.client.prenom = "Martin";
- 	$scope.client.adresse = "Rue de la Liberté, 75000 Paris";
- 	$scope.client.mail = "martin@dupuis.com";
- 	$scope.client.tel = "0606060606";
+  	$scope.client.nom = ""; 
+	$scope.client.prenom = "";
+ 	$scope.client.adresse = "";
+ 	$scope.client.mail = "";
+ 	$scope.client.tel = "";
 
 	$scope.idUser = $scope.client.nom+$scope.client.prenom;
 	$scope.prixPanier = 0;
@@ -43,7 +43,7 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 
 	$scope.populaires = [];
 	var pop1={'id':903,'nom' : "Baguette Parisienne", 'prix': 0.95,'src':"ressources/img/Boulangerie/baguette_parisienne.jpg"};
-	var pop2={'id':201,'nom' : "S. Jambon Fromage", 'prix': 1.80,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
+	var pop2={'id':201,'nom' : "S. Jambon Fromage", 'prix': 3.50,'src':"ressources/img/Sandwich/Sandwich-jambon-emmental.jpg"};
 	var pop3={'id':123,'nom' : "Part de Flan Nature", 'prix': 2.30,'src':"ressources/img/Patisserie/individuelle/Flan.png"};
 	$scope.populaires.push(pop1);
 	$scope.populaires.push(pop2);

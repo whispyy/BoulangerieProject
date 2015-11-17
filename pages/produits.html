@@ -8,8 +8,22 @@
   <ul id="boulangerie">
     <li ng-repeat="x in boulangerie">
       {{x.nom}}
-      <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
-      </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+      <div>
+        <img ng-click="delPanier2(x);" style="margin-left:5px;margin-bottom:5px;width:15px;" src ="ressources/moins-detail.png">
+      </div>
+      <p style="margin-top:7px;font-family:impact;">
+        {{x.prix | number:2}} € 
+        <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select> 
+        <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span>
+      </p>
     </li>
   </ul>
 </div>
@@ -74,7 +88,7 @@
 
 
   <div style="position:relative;float:center;">
-   <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; margin:20px;">Passer la commande !</button>
+   <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; margin:20px;">Je commande !</button>
   </div>
 </div>
 
