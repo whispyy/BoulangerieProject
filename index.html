@@ -45,7 +45,7 @@
             <ul class="nav navbar-nav navbar-right">
                     <li class="active" ng-click="go('home')">Accueil</li>
                     <li ng-click="go('produits')">Produits</li>
-                    <li ng-click="go('about')">About</li>
+                    <!--<li ng-click="go('about')">About</li>-->
                     <li ng-click="go('contact')">Contact</li>
             </ul>
           </div>
@@ -63,7 +63,7 @@
 <footer>
   <div class="foot">
     <h3>Information</h3>
-    <p ng-click="go('contact')">Contactez nous</p>
+    <a ng-click="go('contact')">Contactez nous</a>
     <p ng-click="go('about')">A propos</p>
   </div>
   <div class="foot">
@@ -73,13 +73,19 @@
   </div>
   <ul class="socials">
     <li>
-      <a href="https://facebook.com">F</a>
+      <a href="https://www.facebook.com/chronopain.fr/?fref=ts" target="_blank">
+        <img src="ressources/fb.png"/>
+      </a>
     </li>
     <li>
-      <a href="twitter.com">T</a>
+      <a href="https://twitter.com/Chrono_Pain" target="_blank">
+        <img src="ressources/tw.png"/>
+      </a>
     </li>
     <li>
-      <a href="mailto:contact@chronopain.fr">C</a>
+      <a href="mailto:contactchronopain@gmail.com" target="_blank">
+        <img src="ressources/mail.png"/>
+      </a>
     </li>
   </ul>
   <div class="copyright">© 2015 - Chronopain.fr</div>
