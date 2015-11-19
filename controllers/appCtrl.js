@@ -51,7 +51,6 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 	$scope.populaires.push(pop3);
 
 	$scope.go = function(path) {
-		console.log(path);
 		$state.go(path);
 		$scope.idUser = $scope.client.nom+$scope.client.prenom;
 	};	
