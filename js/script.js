@@ -42,5 +42,26 @@
         url: '/contact',
         templateUrl: 'pages/contact.html',
         controller: 'contactCtrl'
-    })}]);
+    })
+    .state('boulangerie', {
+        url: '/boulangerie',
+        templateUrl: 'pages/boulangerie.html',
+        controller: 'produitsCtrl'
+    })
+    .state('patisserie', {
+        url: '/patisserie',
+        templateUrl: 'pages/patisserie.html',
+        controller: 'produitsCtrl'
+    })
+    .state('sandwich', {
+        url: '/sandwich',
+        templateUrl: 'pages/sandwich.html',
+        controller: 'produitsCtrl'
+    })
+    .state('viennoiserie', {
+        url: '/viennoiserie',
+        templateUrl: 'pages/viennoiserie.html',
+        controller: 'produitsCtrl'
+    })
+}]);
 

@@ -1,0 +1,46 @@
+#boulangerie{
+	padding: 5px;
+	border: solid 1px white;
+	background-color: white;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+#patisserie{
+	padding: 5px;
+	border: solid 1px white;
+	background-color: white;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+#sandwich{
+	padding: 5px;
+	border: solid 1px white;
+	background-color: white;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+#viennoiserie{
+	padding: 5px;
+	border: solid 1px white;
+	background-color: white;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+
+li{
+	list-style: none;
+	display: inline;
+
+}
+
+img{
+	
+	margin-right: 10px;
+}
+
+
+
+
+
+
+/*specifique*/

@@ -46,6 +46,7 @@ NavBar
 	text-decoration: none;
 	font-size: xx-large;
 	font-weight: bold;
+	cursor:pointer;
 }
 #JFbrand:hover{
 	color: #fee5cc;
@@ -57,11 +58,30 @@ NavBar
 }
 #navjf li{
 	margin-right: 20px;
+	cursor:pointer;
 }
 #navjf li:hover{
 	color: white;
 }
+#navjf li a{
+	margin-top:-11px;
+	color: #333333;
+}
 
+#navjf li a:hover{
+	color: #333333;
+	background-color: white;
+}
+#navjf li ul{
+	padding-top: 15px;
+}
+#navjf li ul{
+	background-color:#A16028;
+}
+
+#navjf li ul li{
+	padding:3px;
+}
 
 /*
 footer

@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="styles/prod.css">
 <div class="container">
-  <div id="boulangerie" class="row">
-    <div class="col-xs-6 col-md-3" ng-repeat="x in boulangerie">
-      <img src="ressources/img/Boulangerie/{{x.id}}.jpg" height="120px"/>
+  <div id="sandwich" class="row">
+    <div class="col-xs-6 col-md-3" ng-repeat="x in sandwich">
+      <img src="ressources/img/Sandwich/{{x.id}}.jpg" height="120px"/>
       <h4>{{x.nom}}</h4>
       <p style="margin-top:7px;font-family:impact;">
         {{x.prix | number:2}} € 
@@ -38,5 +38,6 @@
       </div>
     </div>
     <button ng-if="panier[0] != undefined" ng-click="go('client')" type="button" class="btn btn-primary" style="width: 100%; text-align:center; background-color:#FD7E01 !important;border-color:#FD7E01!important;">Je commande</button>
-    <br /> 
+    <br />   
+  </div>
 </div>

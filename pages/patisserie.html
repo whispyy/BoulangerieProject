@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="styles/prod.css">
+<div class="container">
+  <div id="patisserie">
+    <h2>Gateau</h2>
+      <div  class="row">
+        <div class="col-xs-6 col-md-3"  ng-repeat="x in gateau">
+          <img src="ressources/img/Patisserie/Gateau/{{x.id}}.png" width="120px"/>
+          <h3>{{x.nom}}</h3>
+          <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+          </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+        </div>
+      </div>     
+    <h2>Individuelle</h2>
+      <div  class="row">
+        <div class="col-xs-6 col-md-3" ng-repeat="x in individuelle">
+          <img src="ressources/img/Patisserie/Individuelle/{{x.id}}.png" width="120px"/>
+          <h3>{{x.nom}}</h3>
+          <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+          </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+        </div>
+      </div>
+    <h2>Tarte</h2>
+      <div  class="row">
+        <div class="col-xs-6 col-md-3" ng-repeat="x in tarte">
+          <img src="ressources/img/Patisserie/Tarte/{{x.id}}.png" width="120px"/>
+          <h3>{{x.nom}}</h3>
+          <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
+          </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+        </div>
+      </div>
+  </div>
+  <div ng-init="calculPrixPanier()" class="col-md-3" data-offset-top="20">
+    <div class="panel panel-primary">
+      <div id="divTotal" class="panel-heading">
+        <h3 class="panel-title">Mon panier</h3>
+      </div>
+      <div ng-if="panier[0] != undefined">
+        <div ng-repeat="item in panier" class="panel-body">
+          <p><img style="width:15px;margin-left: -6px;margin-right: 5px;" src="ressources/moins.png" ng-click="delPanier(item)">{{item.quantite}}x {{item.nom}}<i style="float:right">{{item.prix | number:2}} €</i></p>
+        </div>
+        <hr style="margin-top : -10px; margin-bottom:0px;">
+        <div class="panel-body">
+          <p>Total<i style="float:right">{{prixPanier| number:2}} €</i></p>
+        </div>
+      </div>
+      <div ng-if="panier[0] == undefined" class="panel-body">
+        <p>Votre panier est vide</p>
+      </div>
+    </div>
+    <button ng-if="panier[0] != undefined" ng-click="go('client')" type="button" class="btn btn-primary" style="width: 100%; text-align:center; background-color:#FD7E01 !important;border-color:#FD7E01!important;">Je commande</button>
+    <br /> 
+  </div>
+</div>

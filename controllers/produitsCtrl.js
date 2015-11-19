@@ -115,32 +115,32 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		$scope.sandwich =
 		[{
 			'id':201 ,
-			'nom':'jambon emmental',
+			'nom':'Jambon-emmental',
 			'prix':3.50
 		},
 		{
 			'id':202,
-			'nom':'jambon serrano',
+			'nom':'Jambon-serrano',
 			'prix':3.50
 		},
 		{
 			'id':203,
-			'nom':'poulet et fromage de chèvre',
+			'nom':'Poulet et Chèvre',
 			'prix':3.50
 		},
 		{
 			'id':204,
-			'nom':'poulet mayonnaise',
+			'nom':'Poulet mayonnaise',
 			'prix':3.50
 		},
 		{
 			'id':205,
-			'nom':'saumon et fromage frais',
+			'nom':'Saumon et fromage frais',
 			'prix':3.80
 		},
 		{
 			'id':206,
-			'nom':'thon mayonnaise',
+			'nom':'Thon mayonnaise',
 			'prix':3.50
 		}];
 
@@ -168,7 +168,7 @@ mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 		},
 		{
 			'id':305,
-			'nom':'brioche orange et chocolat blanc',
+			'nom':'brioche orange',
 			'prix':1.10
 		},
 		{
