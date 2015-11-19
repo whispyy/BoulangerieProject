@@ -131,9 +131,13 @@ PRODUITS
 	opacity:0.7;
 }
 .prod li{
-	cursor: crosshair;
 	list-style: none;
 }
-.prod li:hover{
-	font-weight: bold;
+
+
+/*
+CLIENT
+*/
+.requis{
+	color: red;
 }

@@ -14,6 +14,7 @@
 			<div class="col-md-3">
 				<input type="text" ng-model="client.nom" ng-click="client.nom =''">
 			</div>
+			<div ng-if="client.nom==''" class="requis">Champ requis*</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3">
@@ -22,6 +23,7 @@
 			<div class="col-md-3">
 				<input type="text" ng-model="client.prenom" ng-click="client.prenom =''">
 			</div>
+			<div ng-if="client.prenom==''" class="requis">Champ requis*</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3">
@@ -30,6 +32,7 @@
 			<div class="col-md-3">
 				<input type="text" ng-model="client.adresse" ng-click="client.adresse =''">
 			</div>
+			<div ng-if="client.adresse==''" class="requis">Champ requis*</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3">
@@ -38,6 +41,7 @@
 			<div class="col-md-3">
 				<input type="text" ng-model="client.mail" ng-click="client.mail =''">
 			</div>
+			<div ng-if="client.mail==''" class="requis">Champ requis*</div>
 		</div>
 		<div class="row">
 			<div class="col-md-3">
@@ -46,6 +50,7 @@
 			<div class="col-md-3">
 				<input type="text" ng-model="client.tel" ng-click="client.tel =''">
 			</div>
+			<div ng-if="client.tel==''" class="requis">Champ requis*</div>
 		</div>
 	</div>
 	<div style="text-align:center;">

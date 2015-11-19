@@ -5,12 +5,9 @@
 
 <div class="prod">
   <h2>Boulangerie</h2>
-  <ul id="boulangerie">
+  <ul id="boulangerie" >
     <li ng-repeat="x in boulangerie">
       {{x.nom}}
-      <div>
-        <img ng-click="delPanier2(x);" style="margin-left:5px;margin-bottom:5px;width:15px;" src ="ressources/moins-detail.png">
-      </div>
       <p style="margin-top:7px;font-family:impact;">
         {{x.prix | number:2}} € 
         <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select">
@@ -27,8 +24,9 @@
     </li>
   </ul>
 </div>
+
 <div class="prod">
-  <h2>Patisserie</h2>
+  <h2  ng-click="fpati()">Patisserie</h2>
   <ul id="patisserie">
     <li>Gateau</li>
     <li>
@@ -62,37 +60,62 @@
     </li>
   </ul>
 </div>
+
+
 <div class="prod">
   <h2>Sandwich</h2>
-  <ul id="sandwich">
+  <ul id="sandwich" ng-if="bboul">
     <li ng-repeat="x in sandwich">
       {{x.nom}}
-      <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
-      </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
-    </li>
-  </ul>
-</div>
-<div class="prod">
-  <h2>Viennoiserie</h2>
-  <ul id="viennoiserie">
-    <li ng-repeat="x in viennoiserie">
-      {{x.nom}}
-      <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
-      </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>
+      <p style="margin-top:7px;font-family:impact;">
+        {{x.prix | number:2}} € 
+        <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select> 
+        <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span>
+      </p>
     </li>
   </ul>
 </div>
 
+
+<div class="prod">
+  <h2>Viennoiserie</h2>
+  <ul id="viennoiserie" ng-if="bboul">
+    <li ng-repeat="x in viennoiserie">
+      {{x.nom}}
+      <p style="margin-top:7px;font-family:impact;">
+        {{x.prix | number:2}} € 
+        <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select> 
+        <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span>
+      </p>
+    </li>
+  </ul>
+</div>
 
 
 
 
   <div style="position:relative;float:center;">
-   <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; margin:20px;">Je commande !</button>
+   <button ng-click="go('client')" type="button" class="btn btn-primary" style="width: 200px; text-align:center;margin:20px;background-color:#FD7E01 !important;border-color:#FD7E01!important;">Je commande !</button>
   </div>
 </div>
 
-<div ng-init="calculPrixPanier()" class="col-md-3" data-spy="affix" data-offset-top="20">
+<div ng-init="calculPrixPanier()" class="col-md-3" data-offset-top="20">
          
             <div class="panel panel-primary">
               <div id="divTotal" class="panel-heading">
@@ -114,5 +137,5 @@
           </div>
            <button ng-if="panier[0] != undefined" ng-click="go('client')" type="button" class="btn btn-primary" style="width: 100%; text-align:center;">Continuer</button>
           
-        
+    </div>  
 </div>

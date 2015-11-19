@@ -1,11 +1,11 @@
 'use strict';
-
     // create the module and name it scotchApp
         // also include ngRoute for all our routing needs
     //var appControllers = angular.module('app.controllers', []);
     var mieDore = angular.module('mieDore', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider',function ($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
+
     // configure our routes
     $stateProvider
     .state('home', {

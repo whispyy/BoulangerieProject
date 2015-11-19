@@ -1,6 +1,7 @@
 'use strict';
 
 mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http,$state){
+		
 
 	$scope.client={};
   	$scope.client.nom = ""; 
@@ -129,10 +130,7 @@ mieDore.controller('appCtrl',['$scope', '$http', '$state', function($scope,$http
 		console.log($scope.panierString);
 		return $scope.panierString;
 	}
-		
 	
-
-
 
 
 

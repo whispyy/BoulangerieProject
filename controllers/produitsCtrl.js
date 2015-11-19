@@ -2,7 +2,6 @@
 
 mieDore.controller('produitsCtrl',['$scope', '$state', function($scope,$state){
 
-
 	console.log("produitsCtrl");
 	$scope.page = "produits";
 
