@@ -3,7 +3,7 @@
   <h1>Viennoiserie</h1>
   <div id="viennoiserie" class="row">
     <div class="col-xs-6 col-md-3" ng-repeat="x in viennoiserie">
-      <img src="ressources/img/Viennoiserie/{{x.id}}.jpg" height="120px"/>
+      <img ng-src="ressources/img/Viennoiserie/{{x.id}}.jpg" height="120px"/>
       <h4>{{x.nom}}</h4>
       <p style="margin-top:7px;font-family:impact;">
         {{x.prix | number:2}} € 

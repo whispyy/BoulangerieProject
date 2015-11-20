@@ -5,7 +5,7 @@
     <h2>Gateau</h2>
       <div  class="row">
         <div class="col-xs-6 col-md-3"  ng-repeat="x in gateau">
-          <img src="ressources/img/Patisserie/Gateau/{{x.id}}.png" width="120px"/>
+          <img ng-src="ressources/img/Patisserie/Gateau/{{x.id}}.png" width="120px"/>
           <h3>{{x.nom}}</h3>
           <p style="margin-top:7px;font-family:impact;">{{x.prix | number:2}} € <select style="margin-left: 17%;font-family:helvetica" ng-model="x.quantite" name="select"><option value="1" selected>1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="10">10</option><option value="20">20</option>
           </select> <span style="float:right; margin-top:-5px;" ng-click="addPanier(x)" class="glyphicon glyphicon-shopping-cart btn btn-danger" aria-hidden="true"></span></p>

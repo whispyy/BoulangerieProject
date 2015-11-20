@@ -3,7 +3,7 @@
   <h1>Sandwicherie</h1>
   <div id="sandwich" class="row">
     <div class="col-xs-6 col-md-3" ng-repeat="x in sandwich">
-      <img src="ressources/img/Sandwich/{{x.id}}.jpg" height="120px"/>
+      <img ng-src="ressources/img/Sandwich/{{x.id}}.jpg" height="120px"/>
       <h4>{{x.nom}}</h4>
       <p style="margin-top:7px;font-family:impact;">
         {{x.prix | number:2}} € 
