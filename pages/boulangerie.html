@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="styles/prod.css">
 <div class="container">
   <h1>Boulangerie</h1>
+  <button ng-click="go('produits')" type="button" class="btn btn-primary" style="width: 100%; text-align:center; background-color:#FD7E01 !important;border-color:#FD7E01!important;">Tous nos produits</button>
+  <br /><br />
   <div id="boulangerie" class="row">
     <div class="col-xs-6 col-md-3" ng-repeat="x in boulangerie">
       <img ng-src="ressources/img/Boulangerie/{{x.id}}.jpg" height="120px"/>

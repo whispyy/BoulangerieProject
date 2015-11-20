@@ -18,7 +18,9 @@ body{
 footer{
 	background-color: #A16028;
 }
-
+.pointer{
+	cursor: pointer;
+}
 .mosaique p{
 	font-family: "Impact", Georgia, Serif;
 	color:lightgray;
