@@ -32,6 +32,7 @@
     <script src="controllers/clientCtrl.js"></script>
     <script src="controllers/livraisonCtrl.js"></script>
     <script src="controllers/payerCtrl.js"></script>
+    <script src="controllers/mentionslegalesCtrl.js"></script>
 </head>
 <body style="background-image:url(ressources/pain.jpg); background-repeat:no-repeat; background-position:center center;" ng-app="mieDore" ng-controller="appCtrl">
 	<header>
@@ -46,10 +47,10 @@
                     <li class="active" ng-click="go('home')">Accueil</li>
                     <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produits<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#" ng-click="go('boulangerie')">Boulangerie</a></li>
-                      <li><a href="#" ng-click="go('patisserie')">Patisserie</a></li>
-                      <li><a href="#" ng-click="go('sandwich')">Sandwicherie</a></li>
-                      <li><a href="#" ng-click="go('viennoiserie')">Viennoiserie</a></li>
+                      <li><a ng-click="go('boulangerie')">Boulangerie</a></li>
+                      <li><a ng-click="go('patisserie')">Patisserie</a></li>
+                      <li><a ng-click="go('sandwich')">Sandwicherie</a></li>
+                      <li><a ng-click="go('viennoiserie')">Viennoiserie</a></li>
                     </ul></li>
                     <!--<li ng-click="go('about')">About</li>-->
                     <li ng-click="go('contact')">Contact</li>
@@ -74,7 +75,7 @@
   </div>
   <div class="foot">
     <h3>En savoir plus... </h3>
-    <p>Mentions Légales</p>
+    <a ng-click="go('mentionslegales')">Mentions Légales</a>
     <p>Conditions générales</p>
   </div>
   <ul class="socials">

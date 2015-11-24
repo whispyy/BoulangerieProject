@@ -63,6 +63,11 @@
         templateUrl: 'pages/contact.html',
         controller: 'contactCtrl'
     })
+    .state('mentionslegales', {
+        url: '/mentionslegales',
+        templateUrl: 'pages/mentionslegales.html',
+        controller: 'mentionslegalesCtrl'
+    })
     
 }]);
 
